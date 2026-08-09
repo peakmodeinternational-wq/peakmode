@@ -27,6 +27,8 @@ jobs:
         run: npm run build
         env:
           GH_BASE: "true"
+      - name: SPA fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

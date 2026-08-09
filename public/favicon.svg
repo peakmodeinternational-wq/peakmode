@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <polygon points="32,4 57,18 57,46 32,60 7,46 7,18" fill="#060B14" stroke="#D4AF37" stroke-width="3"/>
+  <polygon points="32,16 47,24 47,40 32,48 17,40 17,24" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#D4AF37">PM</text>
+</svg>

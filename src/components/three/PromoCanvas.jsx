@@ -1,0 +1,1 @@
+export { PromoCanvas as default } from "./Scenes";

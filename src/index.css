@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-white font-body antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #d4af37;
+    color: #060b14;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060b14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #24334d;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.32em] text-gold;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-[13px] font-bold uppercase tracking-[0.18em] text-ink transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_40px_rgba(212,175,55,0.35)];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-white/25 px-7 py-4 text-[13px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:border-gold hover:text-gold;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.22);
+    color: transparent;
+  }
+  .card {
+    @apply relative overflow-hidden rounded-lg border border-white/10 bg-navy;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .stripes-diag {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(212, 175, 55, 0.7) 0,
+      rgba(212, 175, 55, 0.7) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  }
+  .stripes-diag-dark {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(6, 11, 20, 0.5) 0,
+      rgba(6, 11, 20, 0.5) 14px,
+      transparent 14px,
+      transparent 28px
+    );
+  }
+  .stripes-diag-soft {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(212, 175, 55, 0.14) 0,
+      rgba(212, 175, 55, 0.14) 18px,
+      transparent 18px,
+      transparent 36px
+    );
+  }
+  .stripes-h {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 2px,
+      transparent 2px,
+      transparent 46px
+    );
+  }
+  .stripes-anim {
+    animation: stripes-move 1.1s linear infinite;
+  }
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-track.fast {
+    animation-duration: 18s;
+  }
+  .marquee-track.reverse {
+    animation-direction: reverse;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  .blink {
+    animation: blink 1.4s ease-in-out infinite;
+  }
+  .spin-slow {
+    animation: spin 14s linear infinite;
+  }
+  .float-slow {
+    animation: floaty 6s ease-in-out infinite;
+  }
+}
+
+@keyframes stripes-move {
+  to {
+    background-position: 34px 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}

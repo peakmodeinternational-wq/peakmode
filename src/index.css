@@ -75,7 +75,7 @@
     color: transparent;
   }
   .card {
-    @apply relative overflow-hidden rounded-lg border border-white/12 bg-navy transition-colors duration-300;
+    @apply relative overflow-hidden rounded-lg border border-white/10 bg-navy transition-colors duration-300;
     background-image: linear-gradient(165deg, rgba(44, 63, 102, 0.55), rgba(32, 48, 80, 0.97) 72%);
   }
   .card::before {

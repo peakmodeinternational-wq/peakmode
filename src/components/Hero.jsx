@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22 }}
-            className="mt-8 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg"
+            className="mt-8 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
           >
             From pattern to packed cartons — jerseys, training, fleece and OEM programs. 2.4M+
             units a month, 100% in-house, with U.S.-hours account management and audit-ready
@@ -87,7 +87,7 @@ export default function Hero() {
             className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2"
           >
             {["WRAP Certified", "Sedex SMETA", "ISO 9001"].map((b) => (
-              <span key={b} className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.26em] text-white/40">
+              <span key={b} className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.26em] text-white/50">
                 <ShieldCheck className="h-3.5 w-3.5 text-gold/70" />
                 {b}
               </span>
@@ -105,7 +105,7 @@ export default function Hero() {
                 <div className="font-display text-3xl font-black">
                   <CountUp end={s.value} suffix={s.suffix} decimals={s.decimals ?? 0} />
                 </div>
-                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
                   {s.label}
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function Hero() {
             {CHIPS.map((chip) => (
               <span
                 key={chip.label}
-                className={`absolute border border-white/15 bg-ink/75 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.26em] text-white/60 backdrop-blur ${chip.className}`}
+                className={`absolute border border-white/15 bg-ink/75 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.26em] text-white/70 backdrop-blur ${chip.className}`}
               >
                 {chip.label}
               </span>

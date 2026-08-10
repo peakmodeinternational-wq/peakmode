@@ -65,7 +65,7 @@ export default function Capabilities() {
               <h3 className="mt-6 font-display text-xl font-black uppercase tracking-tight group-hover:text-gold">
                 {p.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/55">{p.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/65">{p.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -76,7 +76,7 @@ export default function Capabilities() {
               <div className="font-display text-4xl font-black text-gold sm:text-5xl">
                 <CountUp end={m.end} suffix={m.suffix} decimals={m.decimals ?? 0} />
               </div>
-              <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+              <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                 {m.label}
               </div>
             </div>

@@ -44,7 +44,7 @@ export default function Testimonials() {
                 <div className="font-display text-sm font-black uppercase tracking-[0.2em] text-gold">
                   {item.name}
                 </div>
-                <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/45">
+                <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/55">
                   {item.role}
                 </div>
               </figcaption>
@@ -67,7 +67,7 @@ export default function Testimonials() {
 
         <div className="mt-14 flex items-center justify-center gap-4">
           <span className="stripes-diag h-1 w-14 opacity-70" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50">
             Verified programs · NDA-friendly
           </span>
           <span className="stripes-diag h-1 w-14 opacity-70" />

@@ -58,7 +58,7 @@ export default function ProcessSection({ compact }) {
                     <h3 className="mt-4 font-display text-2xl font-black uppercase tracking-tight hover:text-gold">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/55">{step.desc}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-white/65">{step.desc}</p>
                   </motion.div>
                 </div>
               );

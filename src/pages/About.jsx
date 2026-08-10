@@ -27,7 +27,7 @@ export default function About() {
             gold="One Standard."
             className="mb-8"
           />
-          <div className="space-y-5 text-white/60 leading-relaxed">
+          <div className="space-y-5 text-white/70 leading-relaxed">
             <p>
               Peak Mode International started as a single knitwear floor with twelve stations and a
               rule: never ship what you wouldn't sell to your own team. That rule built every line
@@ -50,7 +50,7 @@ export default function About() {
                 <div className="font-display text-3xl font-black text-gold">
                   <CountUp end={s.end} suffix={s.suffix} />
                 </div>
-                <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white/45">
+                <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white/55">
                   {s.label}
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function About() {
                 <br />
                 <span className="text-gold">Under one roof.</span>
               </h3>
-              <ul className="mt-6 space-y-3 text-sm text-white/60">
+              <ul className="mt-6 space-y-3 text-sm text-white/70">
                 <li className="flex gap-3">
                   <span className="mt-2 h-1 w-4 bg-gold" /> Knitting, dyeing & finishing
                 </li>
@@ -118,7 +118,7 @@ export default function About() {
             >
               <c.icon className="h-7 w-7 text-gold" />
               <h3 className="mt-5 font-display text-xl font-black uppercase">{c.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/55">{c.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/65">{c.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -146,7 +146,7 @@ export default function About() {
                   <div className="card p-6">
                     <span className="font-display text-3xl font-black text-gold">{m.year}</span>
                     <h3 className="mt-2 font-display text-lg font-black uppercase">{m.title}</h3>
-                    <p className="mt-2 text-sm text-white/55">{m.desc}</p>
+                    <p className="mt-2 text-sm text-white/65">{m.desc}</p>
                   </div>
                 </div>
               );
@@ -184,7 +184,7 @@ export default function About() {
               </span>
               <div>
                 <h3 className="font-display text-lg font-black uppercase">{v.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">{v.desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/65">{v.desc}</p>
               </div>
             </motion.div>
           ))}

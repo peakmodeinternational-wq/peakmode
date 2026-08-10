@@ -114,7 +114,7 @@ function MobileMenu({ onClose }) {
                           key={item.name}
                           to={item.href}
                           onClick={close}
-                          className="flex items-center justify-between py-3 pl-4 text-[13px] font-medium text-white/60 hover:text-gold"
+                          className="flex items-center justify-between py-3 pl-4 text-[13px] font-medium text-white/70 hover:text-gold"
                         >
                           {item.name}
                           <ChevronRight className="h-3.5 w-3.5 text-gold/60" />
@@ -185,7 +185,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="tel:+13105550192"
-            className="hidden items-center gap-2 text-[12px] font-semibold uppercase tracking-widest text-white/60 transition-colors hover:text-gold md:flex"
+            className="hidden items-center gap-2 text-[12px] font-semibold uppercase tracking-widest text-white/70 transition-colors hover:text-gold md:flex"
           >
             <Phone className="h-3.5 w-3.5 text-gold" />
             +1 (310) 555-0192

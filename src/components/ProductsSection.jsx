@@ -74,7 +74,7 @@ function TiltCard({ product, index }) {
           <span className="absolute right-3 top-3 border border-gold/40 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.24em] text-gold">
             {product.cat}
           </span>
-          <span className="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
+          <span className="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
             {product.gsm}
           </span>
         </div>
@@ -82,14 +82,14 @@ function TiltCard({ product, index }) {
         <h3 className="mt-6 font-display text-2xl font-black uppercase tracking-tight transition-colors group-hover:text-gold">
           {product.name}
         </h3>
-        <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/40">{product.tag}</p>
-        <p className="mt-4 text-sm leading-relaxed text-white/55">{product.desc}</p>
+        <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/50">{product.tag}</p>
+        <p className="mt-4 text-sm leading-relaxed text-white/65">{product.desc}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
-          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/50">
+          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/60">
             MOQ {product.moq}
           </span>
-          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/50">
+          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/60">
             {product.lead}
           </span>
         </div>
@@ -103,7 +103,7 @@ function TiltCard({ product, index }) {
           </Link>
           <Link
             to="/products"
-            className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.26em] text-white/50 transition-colors hover:text-white"
+            className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.26em] text-white/60 transition-colors hover:text-white"
           >
             Details <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>

@@ -23,7 +23,7 @@ export default function CTABanner() {
             <h2 className="mt-4 font-display text-4xl font-black uppercase leading-[1.02] sm:text-5xl">
               Ready to produce <span className="text-gold">600 units</span>?
             </h2>
-            <p className="mt-5 max-w-lg text-white/60">
+            <p className="mt-5 max-w-lg text-white/70">
               Send your tech pack today. A production-grade quote — fabric, trims, printing and
               freight included — lands in your inbox within 48 hours.
             </p>
@@ -40,11 +40,11 @@ export default function CTABanner() {
             <div className="relative ml-auto w-fit rotate-6">
               <span className="absolute -left-4 top-4 h-full w-full border border-gold/40" />
               <div className="relative rotate-90 border border-white/15 bg-ink/70 px-10 py-8 text-center backdrop-blur">
-                <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">
+                <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50">
                   Capacity
                 </div>
                 <div className="font-display text-6xl font-black text-gold">2.4M</div>
-                <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">
+                <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.3em] text-white/60">
                   units / month
                 </div>
               </div>

@@ -60,7 +60,7 @@ export default function Contact() {
                     {c.title}
                   </h3>
                   {c.lines.map((l) => (
-                    <p key={l} className="mt-1.5 text-sm text-white/55">
+                    <p key={l} className="mt-1.5 text-sm text-white/65">
                       {l}
                     </p>
                   ))}
@@ -77,13 +77,13 @@ export default function Contact() {
                     U.S. business hours
                   </span>
                 </div>
-                <p className="mt-3 text-sm text-white/60">
+                <p className="mt-3 text-sm text-white/70">
                   Monday – Friday, 6:00 AM – 5:00 PM Pacific. Factory floor tours every Thursday
                   for verified buyers — schedule by email.
                 </p>
                 <div className="mt-5 flex items-center gap-3">
                   <span className="stripes-diag h-1.5 w-16 opacity-80" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">
                     New quotes in 48h
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                 <h3 className="mt-6 font-display text-2xl font-black uppercase">
                   Pack received.
                 </h3>
-                <p className="mt-3 max-w-sm text-sm text-white/55">
+                <p className="mt-3 max-w-sm text-sm text-white/65">
                   A production manager will reply within 48 hours with a preliminary quote and
                   sampling date, Pacific time.
                 </p>
@@ -123,7 +123,7 @@ export default function Contact() {
                 className="grid gap-5 sm:grid-cols-2"
               >
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Full name *
                   </label>
                   <input
@@ -133,7 +133,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Company
                   </label>
                   <input
@@ -142,7 +142,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Work email *
                   </label>
                   <input
@@ -153,7 +153,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Phone
                   </label>
                   <input
@@ -163,7 +163,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Product category *
                   </label>
                   <select
@@ -179,7 +179,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Estimated quantity
                   </label>
                   <select className="w-full border border-white/15 bg-ink px-4 py-3.5 text-sm text-white outline-none transition-colors focus:border-gold">
@@ -193,7 +193,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/45">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-white/55">
                     Program details *
                   </label>
                   <textarea
@@ -207,7 +207,7 @@ export default function Contact() {
                   <button type="submit" className="btn-gold w-full sm:w-auto">
                     <Send className="h-4 w-4" /> Submit Request
                   </button>
-                  <p className="mt-4 text-[11px] text-white/35">
+                  <p className="mt-4 text-[11px] text-white/45">
                     NDA available on request. Your specs stay ours — and yours.
                   </p>
                 </div>

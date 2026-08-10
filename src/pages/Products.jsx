@@ -56,7 +56,7 @@ export default function Products() {
                   "border px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.22em] transition-all",
                   filter === f
                     ? "border-gold bg-gold text-ink"
-                    : "border-white/15 text-white/60 hover:border-gold/60 hover:text-gold"
+                    : "border-white/15 text-white/70 hover:border-gold/60 hover:text-gold"
                 )}
               >
                 {f}
@@ -91,10 +91,10 @@ export default function Products() {
                   <h2 className="mt-5 font-display text-xl font-black uppercase leading-tight group-hover:text-gold">
                     {p.name}
                   </h2>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.24em] text-white/40">
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.24em] text-white/50">
                     {p.tag}
                   </p>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-white/55">{p.desc}</p>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-white/65">{p.desc}</p>
 
                   <dl className="mt-6 grid grid-cols-2 gap-y-3 border-t border-white/10 pt-5 text-xs">
                     {[
@@ -106,7 +106,7 @@ export default function Products() {
                       ["Sampling", "7–10 days"],
                     ].map(([k, v]) => (
                       <div key={k}>
-                        <dt className="text-[9px] font-bold uppercase tracking-[0.22em] text-white/35">
+                        <dt className="text-[9px] font-bold uppercase tracking-[0.22em] text-white/45">
                           {k}
                         </dt>
                         <dd className="mt-0.5 font-semibold text-white/80">{v}</dd>
@@ -124,7 +124,7 @@ export default function Products() {
                     <Link
                       to="/contact"
                       aria-label={`Request ${p.name}`}
-                      className="grid h-9 w-9 place-items-center border border-white/15 text-white/60 transition-colors hover:border-gold hover:text-gold"
+                      className="grid h-9 w-9 place-items-center border border-white/15 text-white/70 transition-colors hover:border-gold hover:text-gold"
                     >
                       <ArrowUpRight className="h-4 w-4" />
                     </Link>
@@ -147,13 +147,13 @@ export default function Products() {
             <table className="w-full min-w-[720px] border-collapse text-left">
               <thead>
                 <tr className="border-b border-white/15">
-                  <th className="py-4 pr-6 text-[11px] font-bold uppercase tracking-[0.24em] text-white/45">
+                  <th className="py-4 pr-6 text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">
                     Metric
                   </th>
                   <th className="w-1/3 py-4 pr-6 text-[11px] font-bold uppercase tracking-[0.24em] text-gold">
                     Peak Mode
                   </th>
-                  <th className="w-1/3 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white/45">
+                  <th className="w-1/3 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white/55">
                     Typical supplier
                   </th>
                 </tr>
@@ -165,7 +165,7 @@ export default function Products() {
                       {row.metric}
                     </td>
                     <td className="px-6 py-4 text-sm text-gold/90">{row.us}</td>
-                    <td className="py-4 pl-6 text-sm text-white/45">{row.other}</td>
+                    <td className="py-4 pl-6 text-sm text-white/55">{row.other}</td>
                   </tr>
                 ))}
               </tbody>

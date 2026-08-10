@@ -49,7 +49,7 @@ export default function HeroVisual() {
             <p className="font-display text-xl font-black uppercase leading-tight tracking-tight text-white">
               Match-Day Baseball Jersey
             </p>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/50">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60">
               Your crest, sponsor panels &amp; numbering
             </p>
           </div>

@@ -63,16 +63,16 @@ export default function FabricTech() {
                     {f.name}
                   </span>
                 </div>
-                <p className="mt-5 text-sm leading-relaxed text-white/55">{f.desc}</p>
+                <p className="mt-5 text-sm leading-relaxed text-white/65">{f.desc}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <div>
-                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/35">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">
                       Used in
                     </div>
                     <div className="mt-1 text-xs font-semibold text-white/75">{f.use}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/35">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">
                       Weight
                     </div>
                     <div className="mt-1 text-xs font-black text-gold">{f.gsm}</div>

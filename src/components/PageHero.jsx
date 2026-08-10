@@ -12,7 +12,7 @@ export default function PageHero({ eyebrow, title, gold, sub, crumbs }) {
         <motion.nav
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mb-8 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/40"
+          className="mb-8 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50"
         >
           <Link to="/" className="transition-colors hover:text-gold">Home</Link>
           {crumbs?.map((c) => (
@@ -41,7 +41,7 @@ export default function PageHero({ eyebrow, title, gold, sub, crumbs }) {
               </>
             )}
           </h1>
-          {sub && <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/60">{sub}</p>}
+          {sub && <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/70">{sub}</p>}
         </motion.div>
       </div>
     </section>

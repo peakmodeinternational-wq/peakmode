@@ -40,7 +40,7 @@ export default function Manufacturing() {
                 transition={{ delay: i * 0.08 }}
                 className="card flex items-center justify-between border-gold/20 bg-ink/80 p-8 backdrop-blur"
               >
-                <span className="text-[11px] font-bold uppercase tracking-[0.26em] text-white/55">
+                <span className="text-[11px] font-bold uppercase tracking-[0.26em] text-white/65">
                   {f.label}
                 </span>
                 <span className="font-display text-5xl font-black text-gold">
@@ -65,7 +65,7 @@ export default function Manufacturing() {
               gold="Mapped."
               className="mb-8"
             />
-            <div className="space-y-5 text-sm leading-relaxed text-white/60">
+            <div className="space-y-5 text-sm leading-relaxed text-white/70">
               <p>
                 Cutting on automated spreaders with CAD markers; sewing on dedicated lines that run
                 single-piece flow; printing and washing in climate-controlled bays. Every station
@@ -91,14 +91,14 @@ export default function Manufacturing() {
               <div className="card p-6 text-center">
                 <Factory className="mx-auto h-6 w-6 text-gold" />
                 <div className="mt-3 font-display text-3xl font-black">120k</div>
-                <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">
+                <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/55">
                   sq/ft campus
                 </div>
               </div>
               <div className="card p-6 text-center">
                 <Gauge className="mx-auto h-6 w-6 text-gold" />
                 <div className="mt-3 font-display text-3xl font-black">28.8M</div>
-                <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/45">
+                <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-white/55">
                   units / year
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function Manufacturing() {
                   <Microscope className="h-6 w-6 text-gold" />
                   <h3 className="font-display text-lg font-black uppercase">Equipment Banks</h3>
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/50">
                   {EQUIPMENT.length} banks
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function Manufacturing() {
             title="Audit-Ready,"
             gold="Every Quarter."
           />
-          <p className="max-w-2xl text-white/60">
+          <p className="max-w-2xl text-white/70">
             We hold current certifications on file and welcome unannounced third-party audits.
             Reports are shared with buyers on request — no NDAs needed for audit results.
           </p>

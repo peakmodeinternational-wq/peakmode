@@ -24,7 +24,7 @@ export default function SectionHeading({ eyebrow, title, gold, sub, center, clas
         transition={{ duration: 0.7, delay: 0.08 }}
         className="mt-5 font-display text-4xl font-black uppercase leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl"
       >
-        {title} {gold && <span className="text-gold">{gold}</span>}
+        {title} {gold && <span className="grad-gold-text">{gold}</span>}
       </motion.h2>
       {sub && (
         <motion.p

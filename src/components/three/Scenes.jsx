@@ -13,7 +13,7 @@ function CameraRig() {
   return null;
 }
 
-function CoreBall({ size = 1.3, color = "#D4AF37" }) {
+function CoreBall({ size = 1.3, color = "#D9B45B" }) {
   const mesh = useRef();
   useFrame((_, delta) => {
     mesh.current.rotation.y += delta * 0.28;
@@ -37,7 +37,7 @@ function CoreBall({ size = 1.3, color = "#D4AF37" }) {
   );
 }
 
-function OrbitRing({ radius = 2.05, tilt = 1.15, color = "#6E87B8", speed = 0.12 }) {
+function OrbitRing({ radius = 2.05, tilt = 1.15, color = "#9FB4D4", speed = 0.12 }) {
   const ref = useRef();
   useFrame((_, delta) => {
     ref.current.rotation.z += delta * speed;
@@ -61,7 +61,7 @@ function SpinnerRods() {
       {[0, 1, 2].map((i) => (
         <mesh key={i} rotation={[Math.PI / 2, i * (Math.PI / 3), 0]}>
           <boxGeometry args={[0.028, 5.4, 0.028]} />
-          <meshBasicMaterial color={i === 1 ? "#D4AF37" : "#55688F"} transparent opacity={0.6} />
+          <meshBasicMaterial color={i === 1 ? "#D9B45B" : "#9FB4D4"} transparent opacity={0.6} />
         </mesh>
       ))}
     </group>
@@ -78,7 +78,7 @@ function WireCore() {
     <Float speed={3} rotationIntensity={1.4} floatIntensity={0.6}>
       <mesh ref={ref} position={[1.8, -1.3, -0.5]} scale={0.42}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshBasicMaterial color="#8FA3C8" wireframe transparent opacity={0.4} />
+        <meshBasicMaterial color="#9FB4D4" wireframe transparent opacity={0.4} />
       </mesh>
     </Float>
   );
@@ -89,7 +89,7 @@ function SceneLights() {
     <>
       <ambientLight intensity={0.75} />
       <directionalLight position={[4, 6, 5]} intensity={1.7} />
-      <pointLight position={[-5, -2, 4]} color="#D4AF37" intensity={40} />
+      <pointLight position={[-5, -2, 4]} color="#D9B45B" intensity={40} />
       <pointLight position={[3, -3, -3]} color="#3E8E7E" intensity={22} />
     </>
   );
@@ -102,11 +102,11 @@ export function HeroCanvas() {
         <SceneLights />
         <CameraRig />
         <CoreBall />
-        <OrbitRing radius={2.05} tilt={1.2} color="#6E87B8" />
-        <OrbitRing radius={2.35} tilt={0.4} color="#D4AF37" opacity={0.32} speed={-0.08} />
+        <OrbitRing radius={2.05} tilt={1.2} color="#9FB4D4" />
+        <OrbitRing radius={2.35} tilt={0.4} color="#D9B45B" opacity={0.32} speed={-0.08} />
         <SpinnerRods />
         <WireCore />
-        <Sparkles count={110} scale={[15, 9, 6]} size={2.2} speed={0.35} color="#F0D77B" />
+        <Sparkles count={110} scale={[15, 9, 6]} size={2.2} speed={0.35} color="#F2DC98" />
       </Canvas>
     </div>
   );
@@ -119,15 +119,15 @@ export function PromoCanvas() {
         <SceneLights />
         <CameraRig />
         <CoreBall size={0.95} />
-        <OrbitRing radius={1.5} tilt={1.2} color="#6E87B8" />
-        <OrbitRing radius={1.75} tilt={0.4} color="#D4AF37" opacity={0.35} />
+        <OrbitRing radius={1.5} tilt={1.2} color="#9FB4D4" />
+        <OrbitRing radius={1.75} tilt={0.4} color="#D9B45B" opacity={0.35} />
         <Float speed={2.5} rotationIntensity={1.2} floatIntensity={1.4}>
           <mesh position={[-2.2, 1.1, 0]}>
             <torusKnotGeometry args={[0.42, 0.14, 96, 12]} />
-            <meshStandardMaterial color="#8FA3C8" metalness={0.85} roughness={0.25} />
+            <meshStandardMaterial color="#9FB4D4" metalness={0.85} roughness={0.25} />
           </mesh>
         </Float>
-        <Sparkles count={70} scale={[10, 7, 5]} size={2} speed={0.5} color="#F0D77B" />
+        <Sparkles count={70} scale={[10, 7, 5]} size={2} speed={0.5} color="#F2DC98" />
       </Canvas>
     </div>
   );
@@ -147,7 +147,7 @@ function ThreadSpools() {
       {[-2.6, -1.3, 0, 1.3, 2.6].map((x, i) => (
         <mesh key={x} position={[x, 0, 0]}>
           <boxGeometry args={[0.035, 2.4, 0.035]} />
-          <meshBasicMaterial color={i % 2 ? "#D4AF37" : "#55688F"} transparent opacity={0.55} />
+          <meshBasicMaterial color={i % 2 ? "#D9B45B" : "#9FB4D4"} transparent opacity={0.55} />
         </mesh>
       ))}
     </group>
@@ -164,10 +164,10 @@ export function ThreadCanvas() {
         <Float speed={2} floatIntensity={1.2}>
           <mesh>
             <torusGeometry args={[0.8, 0.28, 12, 64]} />
-            <meshStandardMaterial color="#D4AF37" metalness={0.8} roughness={0.3} />
+            <meshStandardMaterial color="#D9B45B" metalness={0.8} roughness={0.3} />
           </mesh>
         </Float>
-        <Sparkles count={60} scale={[11, 7, 4]} size={2} speed={0.4} color="#F0D77B" />
+        <Sparkles count={60} scale={[11, 7, 4]} size={2} speed={0.4} color="#F2DC98" />
       </Canvas>
     </div>
   );

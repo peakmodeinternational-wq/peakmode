@@ -162,7 +162,7 @@ export const FABRICS = [
     desc: "Digital knit with individual moisture-wicking fibers. Persistent airflow for high-heat training.",
     use: "Base layers, training tees",
     gsm: "190 GSM",
-    tone: "from-[#D4AF37]/40",
+    tone: "from-[#D9B45B]/40",
   },
   {
     name: "Double-Mesh RapidDry",

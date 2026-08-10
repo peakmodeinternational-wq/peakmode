@@ -170,7 +170,7 @@ export default function Navbar() {
       className={cn(
         "relative z-40 border-b transition-all duration-300",
         scrolled && !mobileOpen
-          ? "border-white/10 bg-ink/90 backdrop-blur-xl"
+          ? "border-white/10 bg-ink/85 shadow-[0_18px_50px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
           : "border-transparent bg-ink/40 backdrop-blur-md"
       )}
     >

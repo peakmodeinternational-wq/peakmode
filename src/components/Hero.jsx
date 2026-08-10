@@ -47,7 +47,7 @@ export default function Hero() {
             <br />
             <span className="text-stroke">Performance.</span>
             <br />
-            <span className="text-gold">Built for the</span>
+            <span className="grad-gold-text">Built for the</span>
             <br />
             <span className="relative inline-block">
               American Market.

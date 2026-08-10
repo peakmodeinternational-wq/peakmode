@@ -75,7 +75,7 @@ function GlowRing() {
   return (
     <mesh ref={ref} rotation={[Math.PI / 2.3, 0, 0]} position={[0, 0, 0]}>
       <torusGeometry args={[2.4, 0.018, 8, 160]} />
-      <meshBasicMaterial color="#D4AF37" transparent opacity={0.35} />
+      <meshBasicMaterial color="#D9B45B" transparent opacity={0.35} />
     </mesh>
   );
 }
@@ -84,7 +84,7 @@ function HaloRing() {
   return (
     <mesh rotation={[Math.PI / 2.35, 0, 0]} position={[0, 0, 0]}>
       <torusGeometry args={[2.9, 0.005, 8, 200]} />
-      <meshBasicMaterial color="#8FA3C8" transparent opacity={0.25} />
+      <meshBasicMaterial color="#9FB4D4" transparent opacity={0.25} />
     </mesh>
   );
 }
@@ -94,9 +94,9 @@ function SceneLights() {
     <>
       <ambientLight intensity={0.7} />
       <directionalLight position={[3, 5, 5]} intensity={1.9} />
-      <directionalLight position={[-4, 2, -3]} color="#8FA3C8" intensity={0.9} />
-      <pointLight position={[-2.2, 0.6, 2.4]} color="#D4AF37" intensity={28} />
-      <pointLight position={[2.4, -0.6, -2]} color="#E0C65C" intensity={16} />
+      <directionalLight position={[-4, 2, -3]} color="#9FB4D4" intensity={0.9} />
+      <pointLight position={[-2.2, 0.6, 2.4]} color="#D9B45B" intensity={28} />
+      <pointLight position={[2.4, -0.6, -2]} color="#F2DC98" intensity={16} />
     </>
   );
 }
@@ -131,7 +131,7 @@ export function TShirtScene() {
         scale={[8.5, 7, 5]}
         size={2.4}
         speed={0.3}
-        color="#F0D77B"
+        color="#F2DC98"
       />
       <ContactShadows
         position={[0, -0.95, 0]}

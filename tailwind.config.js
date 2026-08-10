@@ -4,14 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#060B14",
-        navy: "#0B1424",
-        steel: "#24334D",
+        ink: "#070A12",
+        navy: "#0C1322",
+        steel: "#26334F",
         gold: {
-          DEFAULT: "#D4AF37",
-          light: "#F0D77B",
-          dark: "#A8871F",
+          DEFAULT: "#D9B45B",
+          light: "#F2DC98",
+          dark: "#A67C1F",
         },
+        brass: "#7A5E1E",
+        frost: "#9FB4D4",
+        teal: "#3E8E7E",
       },
       fontFamily: {
         display: ["Archivo", "system-ui", "sans-serif"],

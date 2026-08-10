@@ -6,7 +6,7 @@ import StripDivider from "./StripDivider";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-navy">
+    <footer className="relative border-t border-white/10 bg-gradient-to-b from-navy to-[#05070D]">
       <StripDivider />
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>
@@ -25,7 +25,7 @@ export default function Footer() {
                 key={label}
                 href="#"
                 aria-label={label}
-                className="grid h-10 w-10 place-items-center border border-white/15 text-white/60 transition-colors hover:border-gold hover:text-gold"
+                className="grid h-10 w-10 place-items-center border border-white/15 text-white/60 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-light hover:shadow-[0_10px_30px_-12px_rgba(217,180,91,0.55)]"
               >
                 <Icon className="h-4 w-4" />
               </a>

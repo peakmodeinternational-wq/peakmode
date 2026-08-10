@@ -51,7 +51,7 @@ export default function Hero() {
             <br />
             <span className="relative inline-block">
               American Market.
-              <span className="stripes-diag absolute -bottom-2 left-0 h-1.5 w-full opacity-70" />
+              <span className="absolute -bottom-2 left-0 h-[3px] w-3/4 bg-gradient-to-r from-gold-light via-gold to-transparent shadow-[0_0_14px_rgba(217,180,91,0.55)]" />
             </span>
           </motion.h1>
 

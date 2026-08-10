@@ -114,17 +114,17 @@ export default function Products() {
                     ))}
                   </dl>
 
-                  <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+<div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
                     <Link
                       to="/contact"
-                      className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.24em] text-gold hover:text-gold-light"
+                      className="inline-flex items-center gap-2 bg-gradient-to-br from-gold-light via-gold to-gold-dark px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-10px_rgba(217,180,91,0.8)]"
                     >
                       <Download className="h-3.5 w-3.5" /> Download Quote
                     </Link>
                     <Link
                       to="/contact"
                       aria-label={`Request ${p.name}`}
-                      className="grid h-9 w-9 place-items-center border border-white/15 text-white/70 transition-colors hover:border-gold hover:text-gold"
+                      className="grid h-10 w-10 place-items-center border border-gold/40 text-gold transition-all duration-300 hover:border-gold/80 hover:bg-gold/10"
                     >
                       <ArrowUpRight className="h-4 w-4" />
                     </Link>

@@ -8,8 +8,8 @@ const PromoCanvas = lazy(() => import("./three/PromoCanvas"));
 export default function PromoBanner() {
   return (
     <section className="relative overflow-hidden border-y border-gold/30 bg-navy">
-      <div className="stripes-diag-soft stripes-anim absolute inset-0" />
-      <div className="grid-lines absolute inset-0 opacity-60" />
+      <div className="absolute inset-0 bg-[radial-gradient(760px_320px_at_18%_50%,rgba(217,180,91,0.12),transparent_70%)]" />
+      <div className="grid-lines absolute inset-0 opacity-40" />
       <div className="container-x relative grid items-center gap-10 py-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <motion.div
@@ -27,9 +27,9 @@ export default function PromoBanner() {
             viewport={{ once: true, margin: "-60px" }}
             className="mt-5 font-display text-4xl font-black uppercase leading-[1.02] sm:text-5xl"
           >
-            Order by <span className="text-gold">Sep 5</span> —
+            Order by <span className="grad-gold-text">Sep 5</span> —
             <br />
-            Deliveries by <span className="text-gold">Nov 1</span>
+            Deliveries by <span className="grad-gold-text">Nov 1</span>
           </motion.h2>
           <motion.ul
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,9 @@ export default function PromoBanner() {
                 <div
                   key={tag}
                   className={`border px-5 py-3 font-display text-sm font-black tracking-widest ${
-                    i === 0 ? "stripes-diag border-gold text-ink" : "border-gold/40 text-gold"
+                    i === 0
+                      ? "grad-gold-text border-gold/70 bg-gold/10 shadow-[0_0_24px_-8px_rgba(217,180,91,0.5)]"
+                      : "border-gold/30 text-gold/90"
                   }`}
                 >
                   {tag}
@@ -73,8 +75,10 @@ export default function PromoBanner() {
         </div>
 
 <div className="relative">
-          <div className="absolute -left-8 inset-y-0 border border-gold/20" />
-          <div className="absolute -inset-8 border border-gold/10" />
+          <div className="absolute -left-6 -top-6 h-10 w-10 border-l border-t border-gold/40" />
+          <div className="absolute -right-6 -top-6 h-10 w-10 border-r border-t border-gold/40" />
+          <div className="absolute -bottom-6 -left-6 h-10 w-10 border-b border-l border-gold/40" />
+          <div className="absolute -bottom-6 -right-6 h-10 w-10 border-b border-r border-gold/40" />
           <Suspense fallback={<div className="h-72 w-full sm:h-96" />}>
             <PromoCanvas />
           </Suspense>

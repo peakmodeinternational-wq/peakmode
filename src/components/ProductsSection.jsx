@@ -94,18 +94,19 @@ function TiltCard({ product, index }) {
           </span>
         </div>
 
-        <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+<div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
           <Link
             to="/contact"
-            className="text-[11px] font-bold uppercase tracking-[0.26em] text-gold transition-colors hover:text-gold-light"
+            className="inline-flex items-center gap-2 bg-gradient-to-br from-gold-light via-gold to-gold-dark px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-10px_rgba(217,180,91,0.8)]"
           >
             Request Quote
           </Link>
           <Link
             to="/products"
-            className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.26em] text-white/60 transition-colors hover:text-white"
+            className="inline-flex items-center gap-1.5 border border-gold/40 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:border-gold/80 hover:bg-gold/10"
           >
-            Details <ArrowUpRight className="h-3.5 w-3.5" />
+            Details
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
       </div>

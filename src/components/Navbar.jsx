@@ -209,8 +209,9 @@ export default function Navbar() {
 
 function StripHint() {
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px overflow-hidden">
-      <div className="stripes-diag stripes-anim h-full opacity-60" />
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+      <div className="shine-line absolute inset-y-0 w-1/2" />
     </div>
   );
 }

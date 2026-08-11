@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#14282D",
-        navy: "#31605A",
-        steel: "#3A6D66",
-        page: "#2B5751",
+        ink: "#12213A",
+        navy: "#345D92",
+        steel: "#3D68A0",
+        page: "#2E5486",
         cream: "#F2F5EF",
         gold: {
           DEFAULT: "#D9B45B",

@@ -6,7 +6,7 @@ import StripDivider from "./StripDivider";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-cream/10 bg-gradient-to-b from-[#31605A] to-[#27504B]">
+    <footer className="relative border-t border-cream/10 bg-gradient-to-b from-[#345D92] to-[#284A77]">
       <StripDivider />
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>

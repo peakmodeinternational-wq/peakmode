@@ -193,6 +193,12 @@ export default function Navbar() {
           <Link to="/contact" className="btn-gold hidden !px-5 !py-3 md:inline-flex">
             Request a Quote
           </Link>
+          <Link
+            to="/contact"
+            className="btn-gold !px-4 !py-2.5 !text-[11px] md:hidden"
+          >
+            Quote
+          </Link>
           <button
             aria-label="Toggle menu"
             onClick={() => setMobileOpen((o) => !o)}

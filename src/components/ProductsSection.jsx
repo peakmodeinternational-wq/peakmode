@@ -117,7 +117,7 @@ function TiltCard({ product, index }) {
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="relative overflow-hidden py-24">
+    <section id="products" className="relative overflow-hidden py-16 sm:py-24">
       <div className="absolute right-0 top-0 h-full w-64 bg-gradient-to-b from-gold/5 to-transparent" />
       <div className="container-x">
         <SectionHeading

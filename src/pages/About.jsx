@@ -19,7 +19,7 @@ export default function About() {
         crumbs={["About"]}
       />
 
-      <section className="container-x grid gap-14 py-24 lg:grid-cols-2 lg:items-center">
+      <section className="container-x grid gap-14 py-16 lg:grid-cols-2 lg:items-center sm:py-24">
         <div>
           <SectionHeading
             eyebrow="The Long Story, Short"
@@ -89,7 +89,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-y border-cream/10 bg-navy py-20">
+      <section className="border-y border-cream/10 bg-navy py-14 sm:py-20">
         <div className="container-x grid gap-5 md:grid-cols-3">
           {[
             {
@@ -124,7 +124,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="py-16 sm:py-24">
         <div className="container-x">
           <SectionHeading
             eyebrow="Milestones"
@@ -155,7 +155,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-cream/10 py-20">
+      <section className="border-t border-cream/10 py-14 sm:py-20">
         <div className="container-x">
           <div className="text-center">
             <SectionHeading

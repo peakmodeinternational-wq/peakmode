@@ -15,7 +15,7 @@ export default function Testimonials() {
   const item = TESTIMONIALS[idx];
 
   return (
-    <section className="relative overflow-hidden border-y border-cream/10 bg-navy py-24">
+    <section className="relative overflow-hidden border-y border-cream/10 bg-navy py-16 sm:py-24">
       <div className="stripes-diag-soft absolute inset-0 opacity-40" />
       <div className="container-x relative">
         <SectionHeading

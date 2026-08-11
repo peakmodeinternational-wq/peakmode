@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CTABanner() {
   return (
-    <section className="container-x py-24">
+    <section className="container-x py-16 sm:py-24">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ export default function CTABanner() {
         <div className="relative grid items-center gap-10 px-8 py-16 sm:px-14 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <span className="eyebrow">Next Step</span>
-            <h2 className="mt-4 font-display text-4xl font-black uppercase leading-[1.02] sm:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-black uppercase leading-[1.02] sm:text-4xl lg:text-5xl">
               Ready to produce <span className="text-gold">600 units</span>?
             </h2>
             <p className="mt-5 max-w-lg text-cream/70">

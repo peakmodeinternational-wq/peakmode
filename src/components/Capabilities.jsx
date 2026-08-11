@@ -35,7 +35,7 @@ const METRICS = [
 
 export default function Capabilities() {
   return (
-    <section className="relative overflow-hidden border-y border-cream/10 bg-navy py-24">
+    <section className="relative overflow-hidden border-y border-cream/10 bg-navy py-16 sm:py-24">
       <div className="grid-lines absolute inset-0" />
       <div className="stripes-diag-soft absolute -left-20 top-10 h-72 w-72 rotate-12 opacity-50" />
       <div className="container-x relative">

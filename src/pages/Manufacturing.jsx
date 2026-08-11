@@ -23,7 +23,7 @@ export default function Manufacturing() {
         crumbs={["Manufacturing"]}
       />
 
-      <section className="relative overflow-hidden border-b border-cream/10 py-24">
+      <section className="relative overflow-hidden border-b border-cream/10 py-16 sm:py-24">
         <div className="container-x relative">
           <div className="absolute inset-0 opacity-40">
             <Suspense fallback={null}>
@@ -56,7 +56,7 @@ export default function Manufacturing() {
 
       <StripDivider label="Floor & equipment" />
 
-      <section className="py-24">
+      <section className="py-16 sm:py-24">
         <div className="container-x grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionHeading
@@ -133,7 +133,7 @@ export default function Manufacturing() {
         </div>
       </section>
 
-      <section className="border-y border-cream/10 bg-navy py-20">
+      <section className="border-y border-cream/10 bg-navy py-14 sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="Compliance"

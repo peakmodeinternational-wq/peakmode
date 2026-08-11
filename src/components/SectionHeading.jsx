@@ -23,7 +23,7 @@ export default function SectionHeading({ eyebrow, title, gold, sub, center, clas
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7, delay: 0.08 }}
-        className="mt-5 font-display text-4xl font-black uppercase leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl"
+        className="mt-5 font-display text-3xl font-black uppercase leading-[1.02] tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl"
       >
         {title} {gold && <span className="grad-gold-text">{gold}</span>}
       </motion.h2>

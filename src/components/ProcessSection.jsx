@@ -6,7 +6,7 @@ import { PROCESS } from "../data/site";
 
 export default function ProcessSection({ compact }) {
   return (
-    <section id="process" className="relative overflow-hidden py-24">
+    <section id="process" className="relative overflow-hidden py-16 sm:py-24">
       <div className="container-x">
         <SectionHeading
           eyebrow="The Production Line"

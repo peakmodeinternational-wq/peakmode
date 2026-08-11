@@ -25,7 +25,7 @@ export default function PromoBanner() {
             initial={{ opacity: 0, y: 26 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            className="mt-5 font-display text-4xl font-black uppercase leading-[1.02] sm:text-5xl"
+            className="mt-5 font-display text-3xl font-black uppercase leading-[1.02] sm:text-4xl lg:text-5xl"
           >
             Order by <span className="grad-gold-text">Sep 5</span> —
             <br />
@@ -58,7 +58,7 @@ export default function PromoBanner() {
               {["SEP 05", "DEADLINE", "2026"].map((tag, i) => (
                 <div
                   key={tag}
-                  className={`border px-5 py-3 font-display text-sm font-black italic tracking-widest ${
+                  className={`border px-3 py-2 font-display text-xs font-black italic tracking-widest sm:px-5 sm:py-3 sm:text-sm ${
                     i === 0
                       ? "grad-gold-text border-gold/70 bg-gold/10 shadow-[0_0_24px_-8px_rgba(217,180,91,0.5)]"
                       : i === 1

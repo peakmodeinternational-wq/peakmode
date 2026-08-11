@@ -49,7 +49,7 @@ export default function Contact() {
         crumbs={["Contact"]}
       />
 
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -98,7 +98,7 @@ export default function Contact() {
             className="card border-gold/30 p-8 sm:p-10"
           >
             {sent ? (
-              <div className="grid place-items-center py-20 text-center">
+              <div className="grid place-items-center py-14 text-center sm:py-20">
                 <CheckCircle2 className="h-14 w-14 text-gold" />
                 <h3 className="mt-6 font-display text-2xl font-black uppercase">
                   Pack received.

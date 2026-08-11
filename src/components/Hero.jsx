@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="absolute -left-32 top-1/3 h-72 w-72 rounded-full bg-gold/10 blur-[110px]" />
       <div className="stripes-diag-soft absolute right-0 top-0 h-40 w-96 rotate-45 opacity-25" />
 
-      <div className="container-x relative grid items-center gap-4 pb-16 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:pb-20">
+      <div className="container-x relative grid items-center gap-4 pb-14 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:pb-20">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-7 font-display text-[2.7rem] font-black uppercase leading-[0.96] tracking-tight sm:text-6xl lg:text-[4.6rem] xl:text-7xl"
+            className="mt-6 font-display text-[2.35rem] font-black uppercase leading-[0.96] tracking-tight sm:mt-7 sm:text-6xl lg:text-[4.6rem] xl:text-7xl"
           >
             Engineered
             <br />
@@ -119,7 +119,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.25 }}
-          className="relative h-[360px] sm:h-[440px] lg:h-[560px]"
+          className="relative h-[320px] sm:h-[440px] lg:h-[560px]"
         >
           <div
             className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/15 blur-[90px] sm:h-96 sm:w-96"
@@ -141,7 +141,7 @@ export default function Hero() {
             {CHIPS.map((chip) => (
               <span
                 key={chip.label}
-                className={`absolute border border-white/15 bg-ink/75 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.26em] text-white/70 backdrop-blur ${chip.className}`}
+                className={`absolute border border-white/15 bg-ink/75 px-2.5 py-1 text-[8px] font-bold uppercase tracking-[0.22em] text-white/70 backdrop-blur sm:px-3 sm:py-1.5 sm:text-[9px] sm:tracking-[0.26em] ${chip.className}`}
               >
                 {chip.label}
               </span>

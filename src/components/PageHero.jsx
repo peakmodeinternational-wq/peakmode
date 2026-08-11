@@ -8,7 +8,7 @@ export default function PageHero({ eyebrow, title, gold, sub, crumbs }) {
       <div className="grid-lines absolute inset-0" />
       <div className="stripes-diag-soft absolute -right-40 top-0 h-full w-96 rotate-12 opacity-40" />
       <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-gold/10 blur-[100px]" />
-      <div className="container-x relative pb-20 pt-24 sm:pt-28">
+      <div className="container-x relative pb-16 pt-16 sm:pb-20 sm:pt-28">
         <motion.nav
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -32,7 +32,7 @@ export default function PageHero({ eyebrow, title, gold, sub, crumbs }) {
             <span className="h-px w-12 bg-gold" />
             <span className="eyebrow">{eyebrow}</span>
           </div>
-          <h1 className="font-display text-5xl font-black uppercase leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl font-black uppercase leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
             {title}
             {gold && (
               <>

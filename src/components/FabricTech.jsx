@@ -9,7 +9,7 @@ export default function FabricTech() {
   const scrollBy = (dir) => trackRef.current?.scrollBy({ left: dir * 340, behavior: "smooth" });
 
   return (
-    <section id="fabric" className="relative overflow-hidden py-24">
+    <section id="fabric" className="relative overflow-hidden py-16 sm:py-24">
       <div className="stripes-diag-soft absolute left-0 top-0 h-full w-40 -rotate-6 opacity-30" />
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-6">

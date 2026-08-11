@@ -46,7 +46,7 @@ export default function Products() {
         crumbs={["Products"]}
       />
 
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="container-x">
           <div className="mb-10 flex flex-wrap gap-3">
             {FILTERS.map((f) => (
@@ -138,7 +138,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="3D Sample Scan"
@@ -163,7 +163,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="border-y border-cream/10 bg-navy py-20">
+      <section className="border-y border-cream/10 bg-navy py-14 sm:py-20">
         <div className="container-x">
           <SectionHeading
             eyebrow="Vendor Scorecard"

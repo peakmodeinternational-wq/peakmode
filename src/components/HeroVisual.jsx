@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const HERO_IMG =
@@ -8,19 +8,19 @@ const ANNOTATIONS = [
   {
     label: "Shirt",
     sub: "Sublimation knit",
-    style: { left: "56%", top: "20%" },
+    style: { left: "50%", top: "24%" },
     align: "left",
   },
   {
     label: "Shorts",
     sub: "4-way stretch",
-    style: { left: "40%", top: "46%" },
+    style: { left: "34%", top: "50%" },
     align: "right",
   },
   {
     label: "Trouser",
     sub: "Brushed fleece",
-    style: { left: "64%", top: "72%" },
+    style: { left: "68%", top: "72%" },
     align: "right",
   },
 ];
@@ -59,14 +59,85 @@ function Pin({ pin }) {
   );
 }
 
+function Caption() {
+  return (
+    <div
+      className="absolute inset-x-0 bottom-0 border-t border-gold/50"
+      style={{ transform: "translateZ(45px)" }}
+    >
+      <div className="space-y-1.5 px-6 py-5">
+        <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-volt-light">
+          135–160 GSM · Sublimated
+        </p>
+        <p className="font-display text-xl font-black uppercase italic leading-tight tracking-tight text-white">
+          Match-Day Training Kit
+        </p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60">
+          Jersey · Shorts · Trouser — your crest, numbered
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CutoutStage({ cutout }) {
+  return (
+    <>
+      <div
+        className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/15 blur-[80px]"
+        style={{ transform: "translateZ(0)" }}
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/25"
+        style={{ transform: "translateZ(14px)" }}
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/15"
+        style={{ transform: "translateZ(8px)" }}
+      />
+      <motion.img
+        src={cutout}
+        alt="Player in Peak Mode training kit striking the ball, cut out"
+        loading="eager"
+        style={{ transform: "translateZ(42px)" }}
+        className="float-slow absolute inset-x-0 bottom-12 mx-auto h-[74%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_34px_44px_rgba(0,0,0,0.55)]"
+      />
+      <div
+        className="absolute bottom-12 left-1/2 h-5 w-56 -translate-x-1/2 rounded-[50%] bg-black/45 blur-md"
+        style={{ transform: "translateZ(16px)" }}
+      />
+    </>
+  );
+}
+
 export default function HeroVisual() {
   const ref = useRef(null);
+  const [cutout, setCutout] = useState(null);
   const mx = useMotionValue(0.5);
   const my = useMotionValue(0.5);
   const rotateX = useSpring(useTransform(my, [0, 1], [11, -11]), { stiffness: 110, damping: 16 });
   const rotateY = useSpring(useTransform(mx, [0, 1], [-14, 14]), { stiffness: 110, damping: 16 });
   const imgX = useTransform(mx, [0, 1], [10, -10]);
   const imgY = useTransform(my, [0, 1], [6, -6]);
+
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      try {
+        const { removeBackground } = await import("@imgly/background-removal");
+        const blob = await removeBackground(HERO_IMG, {
+          output: { format: "image/png", quality: 1 },
+          progress: () => {},
+        });
+        if (alive) setCutout(URL.createObjectURL(blob));
+      } catch {
+        if (alive) setCutout(null);
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const onMove = (e) => {
     const r = ref.current.getBoundingClientRect();
@@ -93,17 +164,17 @@ export default function HeroVisual() {
         className="absolute inset-0 overflow-hidden rounded-sm border border-white/15"
         style={{ transformStyle: "preserve-3d" }}
       >
-        <motion.img
-          src={HERO_IMG}
-          alt="Player in Peak Mode training kit preparing to strike the ball"
-          loading="eager"
-          style={{ x: imgX, y: imgY, transform: "translateZ(0) scale(1.12)", transformStyle: "preserve-3d" }}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.16]"
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent"
-          style={{ transform: "translateZ(24px)" }}
-        />
+        {cutout ? (
+          <CutoutStage cutout={cutout} />
+        ) : (
+          <motion.img
+            src={HERO_IMG}
+            alt="Player in Peak Mode training kit preparing to strike the ball"
+            loading="eager"
+            style={{ x: imgX, y: imgY, transform: "translateZ(0) scale(1.12)", transformStyle: "preserve-3d" }}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.16]"
+          />
+        )}
         <div
           className="speed-lines absolute inset-0 opacity-60 mix-blend-overlay"
           style={{ transform: "translateZ(30px)" }}
@@ -117,22 +188,7 @@ export default function HeroVisual() {
         {ANNOTATIONS.map((pin) => (
           <Pin key={pin.label} pin={pin} />
         ))}
-        <div
-          className="absolute inset-x-0 bottom-0 border-t border-gold/50"
-          style={{ transform: "translateZ(45px)" }}
-        >
-          <div className="space-y-1.5 px-6 py-5">
-            <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-volt-light">
-              135–160 GSM · Sublimated
-            </p>
-            <p className="font-display text-xl font-black uppercase italic leading-tight tracking-tight text-white">
-              Match-Day Training Kit
-            </p>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60">
-              Jersey · Shorts · Trouser — your crest, numbered
-            </p>
-          </div>
-        </div>
+        <Caption />
       </div>
     </motion.div>
   );

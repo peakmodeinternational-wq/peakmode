@@ -154,7 +154,7 @@ export default function Products() {
               <TShirtScene />
             </div>
             <span className="absolute left-4 top-4 border border-volt/50 px-3 py-1.5 text-[9px] font-bold uppercase italic tracking-[0.28em] text-volt">
-              Drag to rotate · Scroll-free
+              Drag to rotate · Pinch / scroll to zoom
             </span>
             <span className="absolute bottom-4 right-4 font-display text-[10px] font-black uppercase italic tracking-[0.3em] text-cream/60">
               Match-Day Jersey · 135–160 GSM

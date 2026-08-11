@@ -142,8 +142,12 @@ export function TShirtScene() {
         color="#000000"
       />
       <OrbitControls
-        enableZoom={false}
+        enableZoom
         enablePan={false}
+        minDistance={2.6}
+        maxDistance={7}
+        rotateSpeed={0.9}
+        zoomSpeed={1.1}
         autoRotate
         autoRotateSpeed={1.15}
         target={[0, 0, 0]}

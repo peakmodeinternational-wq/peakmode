@@ -60,7 +60,7 @@ export default function Contact() {
                     {c.title}
                   </h3>
                   {c.lines.map((l) => (
-                    <p key={l} className="mt-1.5 text-sm text-ink/65">
+                    <p key={l} className="mt-1.5 text-sm text-cream/65">
                       {l}
                     </p>
                   ))}
@@ -77,13 +77,13 @@ export default function Contact() {
                     U.S. business hours
                   </span>
                 </div>
-                <p className="mt-3 text-sm text-ink/70">
+                <p className="mt-3 text-sm text-cream/70">
                   Monday – Friday, 6:00 AM – 5:00 PM Pacific. Factory floor tours every Thursday
                   for verified buyers — schedule by email.
                 </p>
                 <div className="mt-5 flex items-center gap-3">
                   <span className="stripes-diag h-1.5 w-16 opacity-80" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink/50">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-cream/50">
                     New quotes in 48h
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                 <h3 className="mt-6 font-display text-2xl font-black uppercase">
                   Pack received.
                 </h3>
-                <p className="mt-3 max-w-sm text-sm text-ink/65">
+                <p className="mt-3 max-w-sm text-sm text-cream/65">
                   A production manager will reply within 48 hours with a preliminary quote and
                   sampling date, Pacific time.
                 </p>
@@ -123,69 +123,69 @@ export default function Contact() {
                 className="grid gap-5 sm:grid-cols-2"
               >
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Full name *
                   </label>
                   <input
                     required
                     placeholder="Jordan Miles"
-                    className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold"
+                    className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Company
                   </label>
                   <input
                     placeholder="Miles Athletic Co."
-                    className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold"
+                    className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Work email *
                   </label>
                   <input
                     required
                     type="email"
                     placeholder="jordan@company.com"
-                    className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold"
+                    className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Phone
                   </label>
                   <input
                     type="tel"
                     placeholder="+1 (310) 000-0000"
-                    className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold"
+                    className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Product category *
                   </label>
                   <select
                     required
-                    className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors focus:border-gold"
+                    className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors focus:border-gold"
                   >
                     {PRODUCTS.map((p) => (
-                      <option key={p.id} value={p.name} className="bg-white">
+                      <option key={p.id} value={p.name} className="bg-page">
                         {p.name}
                       </option>
                     ))}
-                    <option value="Other" className="bg-white">Other — tell us below</option>
+                    <option value="Other" className="bg-page">Other — tell us below</option>
                   </select>
                 </div>
                 <div>
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Estimated quantity
                   </label>
-                  <select className="w-full border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors focus:border-gold">
+                  <select className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors focus:border-gold">
                     {["300 – 1,000 pcs", "1,000 – 5,000 pcs", "5,000 – 25,000 pcs", "25,000+ pcs"].map(
                       (o) => (
-                        <option key={o} className="bg-white">
+                        <option key={o} className="bg-page">
                           {o}
                         </option>
                       )
@@ -193,21 +193,21 @@ export default function Contact() {
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-ink/55">
+                  <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Program details *
                   </label>
                   <textarea
                     required
                     rows={5}
                     placeholder="Styles, sizes, target delivery date, retail price point…"
-                    className="w-full resize-none border border-ink/15 bg-white px-4 py-3.5 text-sm text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold"
+                    className="w-full resize-none border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div className="sm:col-span-2">
                   <button type="submit" className="btn-gold w-full sm:w-auto">
                     <Send className="h-4 w-4" /> Submit Request
                   </button>
-                  <p className="mt-4 text-[11px] text-ink/45">
+                  <p className="mt-4 text-[11px] text-cream/45">
                     NDA available on request. Your specs stay ours — and yours.
                   </p>
                 </div>

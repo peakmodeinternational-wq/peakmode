@@ -7,12 +7,12 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-page text-ink font-body antialiased;
+    @apply bg-page text-cream font-body antialiased;
     overflow-x: hidden;
     background-image:
-      radial-gradient(1100px 540px at 50% -12%, rgba(199, 155, 63, 0.1), transparent 62%),
-      radial-gradient(900px 500px at 100% 0%, rgba(184, 240, 74, 0.08), transparent 55%),
-      radial-gradient(800px 460px at -5% 30%, rgba(62, 142, 126, 0.07), transparent 60%);
+      radial-gradient(1100px 540px at 50% -12%, rgba(217, 180, 91, 0.16), transparent 62%),
+      radial-gradient(900px 500px at 100% 0%, rgba(184, 240, 74, 0.09), transparent 55%),
+      radial-gradient(800px 460px at -5% 30%, rgba(62, 142, 126, 0.12), transparent 60%);
   }
   ::selection {
     background: #d9b45b;
@@ -22,10 +22,10 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #e3eaf4;
+    background: #24494d;
   }
   ::-webkit-scrollbar-thumb {
-    background: #c2cde0;
+    background: #3a6d66;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #d9b45b;
@@ -57,26 +57,26 @@
     transform: translateY(0);
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 border border-ink/25 px-7 py-4 text-[13px] font-bold uppercase tracking-[0.18em] text-ink transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 border border-cream/25 px-7 py-4 text-[13px] font-bold uppercase tracking-[0.18em] text-cream transition-all duration-300;
   }
   .btn-ghost:hover {
-    border-color: rgba(199, 155, 63, 0.75);
-    color: #8f6a1d;
-    background: rgba(199, 155, 63, 0.08);
+    border-color: rgba(217, 180, 91, 0.75);
+    color: #f2dc98;
+    background: rgba(217, 180, 91, 0.08);
   }
   .text-stroke {
-    -webkit-text-stroke: 1px rgba(22, 34, 58, 0.4);
+    -webkit-text-stroke: 1px rgba(242, 245, 239, 0.35);
     color: transparent;
   }
   .grad-gold-text {
-    background-image: linear-gradient(100deg, #d9b45b 0%, #c79b3f 48%, #8f6a1d 100%);
+    background-image: linear-gradient(100deg, #f2dc98 0%, #d9b45b 48%, #b98a2e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .card {
-    @apply relative overflow-hidden rounded-lg border border-ink/10 bg-navy transition-colors duration-300;
-    background-image: linear-gradient(165deg, rgba(220, 229, 241, 0.6), rgba(233, 239, 248, 0.98) 72%);
+    @apply relative overflow-hidden rounded-lg border border-cream/10 bg-navy transition-colors duration-300;
+    background-image: linear-gradient(165deg, rgba(58, 109, 102, 0.6), rgba(49, 96, 90, 0.98) 72%);
   }
   .card::before {
     content: "";
@@ -98,8 +98,8 @@
 @layer utilities {
   .grid-lines {
     background-image:
-      linear-gradient(rgba(22, 34, 58, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(22, 34, 58, 0.05) 1px, transparent 1px);
+      linear-gradient(rgba(242, 245, 239, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(242, 245, 239, 0.06) 1px, transparent 1px);
     background-size: 72px 72px;
   }
   .stripes-diag {
@@ -159,8 +159,8 @@
   .stripes-h {
     background-image: repeating-linear-gradient(
       90deg,
-      rgba(22, 34, 58, 0.05) 0,
-      rgba(22, 34, 58, 0.05) 2px,
+      rgba(242, 245, 239, 0.06) 0,
+      rgba(242, 245, 239, 0.06) 2px,
       transparent 2px,
       transparent 46px
     );

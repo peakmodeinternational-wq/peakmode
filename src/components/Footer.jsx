@@ -6,12 +6,12 @@ import StripDivider from "./StripDivider";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-ink/10 bg-gradient-to-b from-[#E9EFF8] to-[#DCE5F1]">
+    <footer className="relative border-t border-cream/10 bg-gradient-to-b from-[#31605A] to-[#27504B]">
       <StripDivider />
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>
           <Logo />
-          <p className="mt-6 max-w-xs text-sm leading-relaxed text-ink/60">
+          <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/60">
             Performance sportswear manufacturer — jerseys, training, fleece and OEM programs built to
             U.S. retail standards, shipped to 40+ markets.
           </p>
@@ -25,7 +25,7 @@ export default function Footer() {
                 key={label}
                 href="#"
                 aria-label={label}
-                className="grid h-10 w-10 place-items-center border border-ink/15 text-ink/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-dark hover:shadow-[0_10px_30px_-12px_rgba(199,155,63,0.55)]"
+                className="grid h-10 w-10 place-items-center border border-cream/15 text-cream/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-light hover:shadow-[0_10px_30px_-12px_rgba(217,180,91,0.55)]"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -38,7 +38,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {NAV_GROUPS.products.map((item) => (
               <li key={item.name}>
-                <Link to={item.href} className="text-sm text-ink/70 transition-colors hover:text-gold">
+                <Link to={item.href} className="text-sm text-cream/70 transition-colors hover:text-gold">
                   {item.name}
                 </Link>
               </li>
@@ -51,14 +51,14 @@ export default function Footer() {
           <ul className="space-y-3">
             {NAV_GROUPS.company.map((item) => (
               <li key={item.name}>
-                <Link to={item.href} className="text-sm text-ink/70 transition-colors hover:text-gold">
+                <Link to={item.href} className="text-sm text-cream/70 transition-colors hover:text-gold">
                   {item.name}
                 </Link>
               </li>
             ))}
             {NAV_GROUPS.manufacturing.slice(0, 2).map((item) => (
               <li key={item.name}>
-                <Link to={item.href} className="text-sm text-ink/70 transition-colors hover:text-gold">
+                <Link to={item.href} className="text-sm text-cream/70 transition-colors hover:text-gold">
                   {item.name}
                 </Link>
               </li>
@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div>
           <h4 className="eyebrow mb-5">Contact</h4>
-          <ul className="space-y-4 text-sm text-ink/70">
+          <ul className="space-y-4 text-sm text-cream/70">
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
@@ -93,8 +93,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-ink/10 py-6">
-        <div className="container-x flex flex-col items-center justify-between gap-3 text-[11px] uppercase tracking-[0.24em] text-ink/45 sm:flex-row">
+      <div className="border-t border-cream/10 py-6">
+        <div className="container-x flex flex-col items-center justify-between gap-3 text-[11px] uppercase tracking-[0.24em] text-cream/45 sm:flex-row">
           <span>© 2026 Peak Mode International — All Rights Reserved</span>
           <span className="font-display text-[11px] font-bold uppercase italic tracking-[0.24em] text-volt/80">
             Engineered Performance · Built in Pakistan · Shipped Worldwide

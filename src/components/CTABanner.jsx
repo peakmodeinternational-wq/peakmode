@@ -10,7 +10,7 @@ export default function CTABanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#1E2C4A] via-[#16223A] to-[#1E2C4A]"
+        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#23484D] via-[#19383D] to-[#23484D]"
       >
         <div className="stripes-diag stripes-anim absolute inset-0 opacity-15" />
         <div className="grid-lines absolute inset-0 opacity-40" />
@@ -23,7 +23,7 @@ export default function CTABanner() {
             <h2 className="mt-4 font-display text-4xl font-black uppercase leading-[1.02] sm:text-5xl">
               Ready to produce <span className="text-gold">600 units</span>?
             </h2>
-            <p className="mt-5 max-w-lg text-white/70">
+            <p className="mt-5 max-w-lg text-cream/70">
               Send your tech pack today. A production-grade quote — fabric, trims, printing and
               freight included — lands in your inbox within 48 hours.
             </p>
@@ -31,7 +31,7 @@ export default function CTABanner() {
               <Link to="/contact" className="btn-gold">
                 Start the Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#" className="btn-ghost !border-white/25 !text-white hover:!text-gold-light">
+              <a href="#" className="btn-ghost !border-cream/25 !text-cream hover:!text-gold-light">
                 <FileDown className="h-4 w-4 text-gold" /> Company Profile PDF
               </a>
             </div>

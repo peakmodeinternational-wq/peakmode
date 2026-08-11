@@ -35,7 +35,7 @@ const METRICS = [
 
 export default function Capabilities() {
   return (
-    <section className="relative overflow-hidden border-y border-ink/10 bg-navy py-24">
+    <section className="relative overflow-hidden border-y border-cream/10 bg-navy py-24">
       <div className="grid-lines absolute inset-0" />
       <div className="stripes-diag-soft absolute -left-20 top-10 h-72 w-72 rotate-12 opacity-50" />
       <div className="container-x relative">
@@ -58,19 +58,19 @@ export default function Capabilities() {
             >
               <div className="flex items-center justify-between">
                 <p.icon className="h-8 w-8 text-gold transition-transform duration-500 group-hover:scale-110" />
-                <span className="font-display text-4xl font-black text-ink/8">
+                <span className="font-display text-4xl font-black text-cream/8">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <h3 className="mt-6 font-display text-xl font-black uppercase tracking-tight group-hover:text-gold">
                 {p.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/65">{p.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-cream/65">{p.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-ink/10 bg-ink/10 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-cream/10 bg-cream/10 lg:grid-cols-4">
           {METRICS.map((m) => (
             <div key={m.label} className="bg-ink px-6 py-9 text-center">
               <div className="font-display text-4xl font-black text-gold sm:text-5xl">

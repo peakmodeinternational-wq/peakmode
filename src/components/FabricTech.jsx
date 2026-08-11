@@ -24,14 +24,14 @@ export default function FabricTech() {
             <button
               aria-label="Scroll left"
               onClick={() => scrollBy(-1)}
-              className="grid h-12 w-12 place-items-center border border-ink/15 text-ink transition-colors hover:border-gold hover:text-gold"
+              className="grid h-12 w-12 place-items-center border border-cream/15 text-cream transition-colors hover:border-gold hover:text-gold"
             >
               <ArrowLeft className="h-4 w-4" />
             </button>
             <button
               aria-label="Scroll right"
               onClick={() => scrollBy(1)}
-              className="grid h-12 w-12 place-items-center border border-ink/15 text-ink transition-colors hover:border-gold hover:text-gold"
+              className="grid h-12 w-12 place-items-center border border-cream/15 text-cream transition-colors hover:border-gold hover:text-gold"
             >
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -63,16 +63,16 @@ export default function FabricTech() {
                     {f.name}
                   </span>
                 </div>
-                <p className="mt-5 text-sm leading-relaxed text-ink/65">{f.desc}</p>
+                <p className="mt-5 text-sm leading-relaxed text-cream/65">{f.desc}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <div>
-                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-ink/45">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-cream/45">
                       Used in
                     </div>
-                    <div className="mt-1 text-xs font-semibold text-ink/75">{f.use}</div>
+                    <div className="mt-1 text-xs font-semibold text-cream/75">{f.use}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-ink/45">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.24em] text-cream/45">
                       Weight
                     </div>
                     <div className="mt-1 text-xs font-black text-gold">{f.gsm}</div>
@@ -80,7 +80,7 @@ export default function FabricTech() {
                 </div>
                 <a
                   href="#contact"
-                  className="mt-5 block border-t border-ink/10 pt-4 text-[11px] font-bold uppercase tracking-[0.26em] text-gold hover:text-gold-dark"
+                  className="mt-5 block border-t border-cream/10 pt-4 text-[11px] font-bold uppercase tracking-[0.26em] text-gold hover:text-gold-light"
                 >
                   Request Sample →
                 </a>

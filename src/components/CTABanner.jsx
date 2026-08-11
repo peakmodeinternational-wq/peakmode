@@ -31,9 +31,9 @@ export default function CTABanner() {
               <Link to="/contact" className="btn-gold">
                 Start the Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#" className="btn-ghost !border-cream/25 !text-cream hover:!text-gold-light">
-                <FileDown className="h-4 w-4 text-gold" /> Company Profile PDF
-              </a>
+              <Link to="/contact" className="btn-ghost !border-cream/25 !text-cream hover:!text-gold-light">
+                <FileDown className="h-4 w-4 text-gold" /> Get the Company Profile
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block">

@@ -17,13 +17,15 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[
-              { icon: Linkedin, label: "LinkedIn" },
-              { icon: Instagram, label: "Instagram" },
-              { icon: Youtube, label: "YouTube" },
-            ].map(({ icon: Icon, label }) => (
+              { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/peak-mode-international" },
+              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/peakmode.international" },
+              { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@PeakModeInternational" },
+            ].map(({ icon: Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noreferrer"
                 aria-label={label}
                 className="grid h-10 w-10 place-items-center border border-cream/15 text-cream/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/70 hover:text-gold-light hover:shadow-[0_10px_30px_-12px_rgba(217,180,91,0.55)]"
               >
@@ -72,14 +74,16 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
-                +1 (310) 555-0192
+                <a href="tel:+13105550192" className="transition-colors hover:text-gold">+1 (310) 555-0192</a>
                 <br />
-                +92 (41) 5550 1920
+                <a href="tel:+924155501920" className="transition-colors hover:text-gold">+92 (41) 5550 1920</a>
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              sales@peakmodeinternational.com
+              <a href="mailto:sales@peakmodeinternational.com" className="transition-colors hover:text-gold">
+                sales@peakmodeinternational.com
+              </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />

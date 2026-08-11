@@ -6,6 +6,7 @@ import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
 import StripDivider from "../components/StripDivider";
 import CTABanner from "../components/CTABanner";
+import TShirtScene from "../components/three/TShirtScene";
 import { COMPARISON, PRODUCTS } from "../data/site";
 import { cn } from "../lib/cn";
 
@@ -134,6 +135,31 @@ export default function Products() {
               ))}
             </motion.div>
           </AnimatePresence>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="3D Sample Scan"
+            title="Spin the"
+            gold="Jersey."
+            sub="A photogrammetry scan of our actual match-day cut — drag to inspect the paneling, drop shoulder and pressed neck tape."
+          />
+          <div className="relative overflow-hidden rounded-xl border border-gold/25 bg-gradient-to-br from-[#1B2127] via-[#222A33] to-[#1B2127]">
+            <div className="grid-lines absolute inset-0 opacity-60" />
+            <div className="speed-lines absolute inset-y-0 right-0 w-1/2 opacity-50" />
+            <div className="pointer-events-none absolute -left-24 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-gold/10 blur-[90px]" />
+            <div className="relative h-[420px] sm:h-[480px]">
+              <TShirtScene />
+            </div>
+            <span className="absolute left-4 top-4 border border-volt/50 px-3 py-1.5 text-[9px] font-bold uppercase italic tracking-[0.28em] text-volt">
+              Drag to rotate · Scroll-free
+            </span>
+            <span className="absolute bottom-4 right-4 font-display text-[10px] font-black uppercase italic tracking-[0.3em] text-cream/60">
+              Match-Day Jersey · 135–160 GSM
+            </span>
+          </div>
         </div>
       </section>
 

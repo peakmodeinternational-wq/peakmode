@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { CalendarDays, CheckCircle2, Ship } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const PromoCanvas = lazy(() => import("./three/PromoCanvas"));
+const ThreadCanvas = lazy(() => import("./three/ThreadCanvas"));
 
 export default function PromoBanner() {
   return (
@@ -82,10 +82,12 @@ export default function PromoBanner() {
           <div className="absolute -bottom-6 -left-6 h-10 w-10 border-b border-l border-gold/40" />
           <div className="absolute -bottom-6 -right-6 h-10 w-10 border-b border-r border-gold/40" />
           <Suspense fallback={<div className="h-72 w-full sm:h-96" />}>
-            <PromoCanvas />
+            <div className="relative h-72 w-full overflow-hidden sm:h-96">
+              <ThreadCanvas />
+            </div>
           </Suspense>
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-ink/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-gold backdrop-blur">
-            Live from the floor — sample run
+            Live from the floor — spooling the sample run
           </div>
         </div>
       </div>

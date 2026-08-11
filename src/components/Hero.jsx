@@ -53,7 +53,7 @@ export default function Hero() {
             <br />
             <span className="relative inline-block">
               American Market.
-              <span className="absolute -bottom-2 left-0 h-[3px] w-3/4 bg-gradient-to-r from-gold-light via-gold to-transparent shadow-[0_0_14px_rgba(217,180,91,0.55)]" />
+              <span className="absolute -bottom-2 left-0 h-[3px] w-3/4 bg-gradient-to-r from-gold-dark via-gold to-transparent shadow-[0_0_14px_rgba(199,155,63,0.55)]" />
             </span>
           </motion.h1>
 
@@ -61,7 +61,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22 }}
-            className="mt-8 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg"
+            className="mt-8 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg"
           >
             From pattern to packed cartons — jerseys, training, fleece and OEM programs. 2.4M+
             units a month, 100% in-house, with U.S.-hours account management and audit-ready
@@ -89,7 +89,7 @@ export default function Hero() {
             className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2"
           >
             {["WRAP Certified", "Sedex SMETA", "ISO 9001"].map((b) => (
-              <span key={b} className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.26em] text-white/50">
+              <span key={b} className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.26em] text-ink/50">
                 <ShieldCheck className="h-3.5 w-3.5 text-gold/70" />
                 {b}
               </span>
@@ -100,14 +100,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-8 grid grid-cols-2 gap-x-8 gap-y-2 border-t border-white/10 pt-7 sm:grid-cols-4"
+            className="mt-8 grid grid-cols-2 gap-x-8 gap-y-2 border-t border-ink/10 pt-7 sm:grid-cols-4"
           >
             {HERO_STATS.map((s) => (
               <div key={s.label} className="border-l-2 border-gold/60 pl-3">
                 <div className="font-display text-3xl font-black">
                   <CountUp end={s.value} suffix={s.suffix} decimals={s.decimals ?? 0} />
                 </div>
-                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/55">
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">
                   {s.label}
                 </div>
               </div>
@@ -160,8 +160,8 @@ export default function Hero() {
           </div>
 
           <div className="absolute bottom-4 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex">
-            <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-white/30">Scroll</span>
-            <span className="h-8 w-px overflow-hidden bg-white/15">
+            <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-ink/30">Scroll</span>
+            <span className="h-8 w-px overflow-hidden bg-ink/15">
               <span className="stripes-diag block h-full w-full opacity-70" />
             </span>
           </div>

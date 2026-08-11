@@ -8,7 +8,7 @@ export default function Logo({ className }) {
         <span className="font-display text-lg font-black text-gold">PM</span>
       </span>
       <span className="leading-none">
-        <span className="block font-display text-lg font-black uppercase tracking-[0.14em] text-white">
+        <span className="block font-display text-lg font-black uppercase tracking-[0.14em] text-ink">
           Peak Mode
         </span>
         <span className="block pt-1 text-[9px] font-semibold uppercase tracking-[0.4em] text-gold">

@@ -10,12 +10,12 @@ export default function CTABanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-navy via-ink to-navy"
+        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#1E2C4A] via-[#16223A] to-[#1E2C4A]"
       >
         <div className="stripes-diag stripes-anim absolute inset-0 opacity-15" />
         <div className="grid-lines absolute inset-0 opacity-40" />
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gold/15 blur-[100px]" />
-        <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-steel/40 blur-[90px]" />
+        <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-gold/10 blur-[90px]" />
 
         <div className="relative grid items-center gap-10 px-8 py-16 sm:px-14 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
@@ -31,7 +31,7 @@ export default function CTABanner() {
               <Link to="/contact" className="btn-gold">
                 Start the Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="#" className="btn-ghost">
+              <a href="#" className="btn-ghost !border-white/25 !text-white hover:!text-gold-light">
                 <FileDown className="h-4 w-4 text-gold" /> Company Profile PDF
               </a>
             </div>

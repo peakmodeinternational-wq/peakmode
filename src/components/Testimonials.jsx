@@ -15,7 +15,7 @@ export default function Testimonials() {
   const item = TESTIMONIALS[idx];
 
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-navy py-24">
+    <section className="relative overflow-hidden border-y border-ink/10 bg-navy py-24">
       <div className="stripes-diag-soft absolute inset-0 opacity-40" />
       <div className="container-x relative">
         <SectionHeading
@@ -36,7 +36,7 @@ export default function Testimonials() {
               transition={{ duration: 0.5 }}
               className="relative text-center"
             >
-              <blockquote className="text-xl leading-relaxed text-white/85 sm:text-2xl">
+              <blockquote className="text-xl leading-relaxed text-ink/85 sm:text-2xl">
                 “{item.quote}”
               </blockquote>
               <figcaption className="mt-8">
@@ -44,7 +44,7 @@ export default function Testimonials() {
                 <div className="font-display text-sm font-black uppercase tracking-[0.2em] text-gold">
                   {item.name}
                 </div>
-                <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/55">
+                <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/55">
                   {item.role}
                 </div>
               </figcaption>
@@ -58,7 +58,7 @@ export default function Testimonials() {
                 aria-label={`Testimonial ${i + 1}`}
                 onClick={() => setIdx(i)}
                 className={`h-1.5 transition-all duration-300 ${
-                  i === idx ? "w-10 bg-gold" : "w-4 bg-white/25 hover:bg-white/50"
+                  i === idx ? "w-10 bg-gold" : "w-4 bg-ink/25 hover:bg-ink/50"
                 }`}
               />
             ))}
@@ -67,7 +67,7 @@ export default function Testimonials() {
 
         <div className="mt-14 flex items-center justify-center gap-4">
           <span className="stripes-diag h-1 w-14 opacity-70" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50">
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-ink/50">
             Verified programs · NDA-friendly
           </span>
           <span className="stripes-diag h-1 w-14 opacity-70" />

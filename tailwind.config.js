@@ -5,10 +5,11 @@ export default {
     extend: {
       colors: {
         ink: "#16223A",
-        navy: "#203050",
-        steel: "#2C3F66",
+        navy: "#E9EFF8",
+        steel: "#DCE5F1",
+        page: "#F4F7FB",
         gold: {
-          DEFAULT: "#D9B45B",
+          DEFAULT: "#C79B3F",
           light: "#F2DC98",
           dark: "#A67C1F",
         },

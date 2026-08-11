@@ -16,7 +16,7 @@ export default function ProcessSection({ compact }) {
         />
 
         <div className="relative">
-          <div className="absolute left-[27px] top-0 h-full w-px bg-white/10 lg:left-1/2" />
+          <div className="absolute left-[27px] top-0 h-full w-px bg-ink/10 lg:left-1/2" />
           <motion.div
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
@@ -50,7 +50,7 @@ export default function ProcessSection({ compact }) {
                     className={`card p-8 ${left ? "lg:col-start-1" : "lg:col-start-2"}`}
                   >
                     <div className="flex items-start justify-between">
-                      <span className="font-display text-6xl font-black text-white/8">{step.num}</span>
+                      <span className="font-display text-6xl font-black text-ink/8">{step.num}</span>
                       <span className="border border-gold/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.28em] text-gold">
                         {step.time}
                       </span>
@@ -58,7 +58,7 @@ export default function ProcessSection({ compact }) {
                     <h3 className="mt-4 font-display text-2xl font-black uppercase tracking-tight hover:text-gold">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-white/65">{step.desc}</p>
+                    <p className="mt-3 text-sm leading-relaxed text-ink/65">{step.desc}</p>
                   </motion.div>
                 </div>
               );

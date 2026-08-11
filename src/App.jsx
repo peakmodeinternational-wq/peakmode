@@ -37,7 +37,7 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-ink text-white">
+      <div className="min-h-screen bg-page text-ink">
         <SiteHeader />
         <main>
           <Routes>

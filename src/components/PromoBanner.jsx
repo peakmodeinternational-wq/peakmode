@@ -42,7 +42,7 @@ export default function PromoBanner() {
               "Air-freight backup options at locked bulk rates",
               "Free 3-piece sampling for programs placed this month",
             ].map((line) => (
-              <li key={line} className="flex items-start gap-3 text-sm text-white/70">
+              <li key={line} className="flex items-start gap-3 text-sm text-ink/70">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-volt" />
                 {line}
               </li>

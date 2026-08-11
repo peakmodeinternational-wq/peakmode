@@ -31,7 +31,7 @@ function DesktopMenu() {
               className={({ isActive }) =>
                 cn(
                   "block px-4 py-3 text-[12.5px] font-semibold uppercase tracking-[0.16em] transition-colors",
-                  isActive ? "text-gold" : "text-white/75 hover:text-volt-light"
+                  isActive ? "text-gold" : "text-ink/75 hover:text-volt-dark"
                 )
               }
             >
@@ -51,14 +51,14 @@ function DesktopMenu() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute left-0 top-full z-50 w-64 border border-white/10 bg-navy/95 p-4 shadow-2xl backdrop-blur-xl"
+                  className="absolute left-0 top-full z-50 w-64 border border-ink/10 bg-page/95 p-4 shadow-2xl backdrop-blur-xl"
                 >
                   <span className="mb-3 block h-px w-8 bg-gold" />
                   {NAV_GROUPS[link.group].map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="group flex items-center justify-between border-b border-white/5 py-2.5 text-[13px] font-medium text-white/70 transition-colors last:border-0 hover:text-gold"
+                      className="group flex items-center justify-between border-b border-ink/5 py-2.5 text-[13px] font-medium text-ink/70 transition-colors last:border-0 hover:text-gold"
                     >
                       {item.name}
                       <ChevronRight className="h-3.5 w-3.5 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
@@ -85,16 +85,16 @@ function MobileMenu({ onClose }) {
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
-      className="absolute inset-x-0 top-full z-50 border-t border-white/10 bg-ink/95 backdrop-blur-xl lg:hidden"
+      className="absolute inset-x-0 top-full z-50 border-t border-ink/10 bg-page/95 backdrop-blur-xl lg:hidden"
     >
       <div className="container-x py-6">
         {LINKS.map((link) => (
-          <div key={link.label} className="border-b border-white/8">
+          <div key={link.label} className="border-b border-ink/8">
             {link.group ? (
               <>
                 <button
                   onClick={() => setOpenGroup(openGroup === link.group ? null : link.group)}
-                  className="flex w-full items-center justify-between py-4 font-display text-sm font-bold uppercase tracking-[0.2em] text-white"
+                  className="flex w-full items-center justify-between py-4 font-display text-sm font-bold uppercase tracking-[0.2em] text-ink"
                 >
                   {link.label}
                   <ChevronDown
@@ -114,7 +114,7 @@ function MobileMenu({ onClose }) {
                           key={item.name}
                           to={item.href}
                           onClick={close}
-                          className="flex items-center justify-between py-3 pl-4 text-[13px] font-medium text-white/70 hover:text-gold"
+                          className="flex items-center justify-between py-3 pl-4 text-[13px] font-medium text-ink/70 hover:text-gold"
                         >
                           {item.name}
                           <ChevronRight className="h-3.5 w-3.5 text-gold/60" />
@@ -132,7 +132,7 @@ function MobileMenu({ onClose }) {
                 className={({ isActive }) =>
                   cn(
                     "block py-4 font-display text-sm font-bold uppercase tracking-[0.2em]",
-                    isActive ? "text-gold" : "text-white"
+                    isActive ? "text-gold" : "text-ink"
                   )
                 }
               >
@@ -170,8 +170,8 @@ export default function Navbar() {
       className={cn(
         "relative z-40 border-b transition-all duration-300",
         scrolled && !mobileOpen
-          ? "border-white/10 bg-ink/85 shadow-[0_18px_50px_-24px_rgba(0,0,0,0.9)] backdrop-blur-2xl"
-          : "border-transparent bg-ink/40 backdrop-blur-md"
+          ? "border-ink/10 bg-white/85 shadow-[0_18px_50px_-24px_rgba(22,34,58,0.18)] backdrop-blur-2xl"
+          : "border-transparent bg-white/40 backdrop-blur-md"
       )}
     >
       <StripHint />
@@ -185,7 +185,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="tel:+13105550192"
-            className="hidden items-center gap-2 text-[12px] font-semibold uppercase tracking-widest text-white/70 transition-colors hover:text-gold md:flex"
+            className="hidden items-center gap-2 text-[12px] font-semibold uppercase tracking-widest text-ink/70 transition-colors hover:text-gold md:flex"
           >
             <Phone className="h-3.5 w-3.5 text-gold" />
             +1 (310) 555-0192
@@ -196,7 +196,7 @@ export default function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setMobileOpen((o) => !o)}
-            className="grid h-11 w-11 place-items-center border border-white/15 text-white lg:hidden"
+            className="grid h-11 w-11 place-items-center border border-ink/15 text-ink lg:hidden"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

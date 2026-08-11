@@ -12,7 +12,7 @@ function ProductArt({ product, Icon }) {
   if (failed || !product.img) {
     return (
       <div className="absolute inset-0 grid place-items-center">
-        <Icon className="h-14 w-14 text-white/25 transition-all duration-500 group-hover:scale-110 group-hover:text-gold/70" />
+        <Icon className="h-14 w-14 text-ink/25 transition-all duration-500 group-hover:scale-110 group-hover:text-gold/70" />
       </div>
     );
   }
@@ -63,13 +63,13 @@ function TiltCard({ product, index }) {
       style={{ rotateX: rx, rotateY: ry, transformPerspective: 900 }}
       className="group"
     >
-      <div className="card h-full border-white/10 p-7 transition-colors duration-300 hover:border-gold/50">
-<div className="relative h-44 overflow-hidden rounded-sm border border-white/5 bg-gradient-to-br from-steel/60 to-ink">
+      <div className="card h-full border-ink/10 p-7 transition-colors duration-300 hover:border-gold/50">
+<div className="relative h-44 overflow-hidden rounded-sm border border-ink/5 bg-gradient-to-br from-steel/60 to-ink">
           <div className="stripes-diag-soft absolute inset-0 opacity-30" />
           <ProductArt product={product} Icon={Icon} />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/20" />
           <div className="absolute -right-4 top-6 h-[3px] w-20 rotate-[-22deg] bg-volt/60" />
-          <span className="absolute left-3 top-3 font-display text-5xl font-black text-white/8">
+          <span className="absolute left-3 top-3 font-display text-5xl font-black text-ink/8">
             {String(index + 1).padStart(2, "0")}
           </span>
           <span className="absolute right-3 top-3 border border-volt/50 px-2 py-0.5 text-[9px] font-bold uppercase italic tracking-[0.24em] text-volt">
@@ -83,8 +83,8 @@ function TiltCard({ product, index }) {
         <h3 className="mt-6 font-display text-2xl font-black uppercase tracking-tight transition-colors group-hover:text-gold">
           {product.name}
         </h3>
-        <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/50">{product.tag}</p>
-        <p className="mt-4 text-sm leading-relaxed text-white/65">{product.desc}</p>
+        <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-ink/50">{product.tag}</p>
+        <p className="mt-4 text-sm leading-relaxed text-ink/65">{product.desc}</p>
 
 <div className="mt-5 flex flex-wrap gap-2">
           <span className="border border-volt/30 px-2.5 py-1 text-[10px] font-bold uppercase italic tracking-widest text-volt/80">
@@ -95,7 +95,7 @@ function TiltCard({ product, index }) {
           </span>
         </div>
 
-<div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+<div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-5">
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 bg-gradient-to-br from-gold-light via-gold to-gold-dark px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-10px_rgba(217,180,91,0.8)]"

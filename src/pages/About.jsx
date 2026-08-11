@@ -27,7 +27,7 @@ export default function About() {
             gold="One Standard."
             className="mb-8"
           />
-          <div className="space-y-5 text-white/70 leading-relaxed">
+          <div className="space-y-5 text-ink/70 leading-relaxed">
             <p>
               Peak Mode International started as a single knitwear floor with twelve stations and a
               rule: never ship what you wouldn't sell to your own team. That rule built every line
@@ -50,7 +50,7 @@ export default function About() {
                 <div className="font-display text-3xl font-black text-gold">
                   <CountUp end={s.end} suffix={s.suffix} />
                 </div>
-                <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-white/55">
+                <div className="mt-1 text-[9px] font-bold uppercase tracking-[0.22em] text-ink/55">
                   {s.label}
                 </div>
               </div>
@@ -60,7 +60,7 @@ export default function About() {
 
         <div className="relative">
           <div className="absolute -left-6 -top-6 h-full w-full border border-gold/30" />
-          <div className="relative overflow-hidden rounded-md border border-white/10 bg-navy">
+          <div className="relative overflow-hidden rounded-md border border-ink/10 bg-navy">
             <div className="grid-lines absolute inset-0" />
             <div className="stripes-diag-soft absolute inset-0 rotate-3 opacity-50" />
             <div className="relative p-10">
@@ -70,7 +70,7 @@ export default function About() {
                 <br />
                 <span className="text-gold">Under one roof.</span>
               </h3>
-              <ul className="mt-6 space-y-3 text-sm text-white/70">
+              <ul className="mt-6 space-y-3 text-sm text-ink/70">
                 <li className="flex gap-3">
                   <span className="mt-2 h-1 w-4 bg-gold" /> Knitting, dyeing & finishing
                 </li>
@@ -89,7 +89,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-navy py-20">
+      <section className="border-y border-ink/10 bg-navy py-20">
         <div className="container-x grid gap-5 md:grid-cols-3">
           {[
             {
@@ -118,7 +118,7 @@ export default function About() {
             >
               <c.icon className="h-7 w-7 text-gold" />
               <h3 className="mt-5 font-display text-xl font-black uppercase">{c.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">{c.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ink/65">{c.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -132,7 +132,7 @@ export default function About() {
             gold="Timeline."
           />
           <div className="relative">
-            <div className="absolute left-4 top-0 h-full w-1 bg-white/10 sm:left-1/2" />
+            <div className="absolute left-4 top-0 h-full w-1 bg-ink/10 sm:left-1/2" />
             {MILESTONES.map((m, i) => {
               const left = i % 2 === 0;
               return (
@@ -146,7 +146,7 @@ export default function About() {
                   <div className="card p-6">
                     <span className="font-display text-3xl font-black text-gold">{m.year}</span>
                     <h3 className="mt-2 font-display text-lg font-black uppercase">{m.title}</h3>
-                    <p className="mt-2 text-sm text-white/65">{m.desc}</p>
+                    <p className="mt-2 text-sm text-ink/65">{m.desc}</p>
                   </div>
                 </div>
               );
@@ -155,7 +155,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 py-20">
+      <section className="border-t border-ink/10 py-20">
         <div className="container-x">
           <div className="text-center">
             <SectionHeading
@@ -184,7 +184,7 @@ export default function About() {
               </span>
               <div>
                 <h3 className="font-display text-lg font-black uppercase">{v.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/65">{v.desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink/65">{v.desc}</p>
               </div>
             </motion.div>
           ))}

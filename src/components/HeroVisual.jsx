@@ -1,57 +1,58 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80";
+const CUTOUT = import.meta.env.BASE_URL + "hero-cutout.png";
 
 const ANNOTATIONS = [
   {
-    label: "Shirt",
+    label: "Jersey",
     sub: "Sublimation knit",
-    style: { left: "50%", top: "24%" },
+    style: { left: "52%", top: "20%" },
     align: "left",
   },
   {
     label: "Shorts",
     sub: "4-way stretch",
-    style: { left: "34%", top: "50%" },
+    style: { left: "30%", top: "48%" },
     align: "right",
   },
   {
     label: "Trouser",
     sub: "Brushed fleece",
-    style: { left: "68%", top: "72%" },
+    style: { left: "70%", top: "74%" },
     align: "right",
   },
 ];
 
 function Pin({ pin }) {
   const chip = (
-    <span className="block bg-ink/85 px-2.5 py-1.5 backdrop-blur">
-      <span className="block font-display text-[9px] font-black uppercase italic leading-none tracking-[0.24em] text-gold">
+    <span className="block max-w-[46%] bg-ink/85 px-2 py-1 backdrop-blur md:max-w-none md:px-2.5 md:py-1.5">
+      <span className="block font-display text-[7px] font-black uppercase italic leading-none tracking-[0.22em] text-gold md:text-[9px] md:tracking-[0.24em]">
         {pin.label}
       </span>
-      <span className="mt-1 block text-[8px] font-bold uppercase leading-none tracking-[0.2em] text-volt-light">
+      <span className="mt-0.5 hidden text-[8px] font-bold uppercase leading-none tracking-[0.2em] text-volt-light md:block">
         {pin.sub}
       </span>
     </span>
   );
   return (
-    <div className="absolute hidden md:block" style={pin.style}>
+    <div className="absolute" style={pin.style}>
       <div className="relative flex items-center" style={{ transform: "translateZ(70px)" }}>
-        <span className="relative flex h-3 w-3 shrink-0 items-center justify-center">
+        <span className="relative flex h-2.5 w-2.5 shrink-0 items-center justify-center md:h-3 md:w-3">
           <span className="blink absolute inline-flex h-full w-full rounded-full bg-gold/40" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-gold shadow-[0_0_10px_rgba(217,180,91,0.9)]" />
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(217,180,91,0.9)] md:h-2 md:w-2" />
         </span>
         {pin.align === "left" ? (
           <>
-            <span className="h-px w-6 bg-gold/70" />
+            <span className="h-px w-3 bg-gold/70 md:w-6" />
             {chip}
           </>
         ) : (
           <>
             {chip}
-            <span className="h-px w-6 bg-gold/70" />
+            <span className="h-px w-3 bg-gold/70 md:w-6" />
           </>
         )}
       </div>
@@ -80,64 +81,15 @@ function Caption() {
   );
 }
 
-function CutoutStage({ cutout }) {
-  return (
-    <>
-      <div
-        className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/15 blur-[80px]"
-        style={{ transform: "translateZ(0)" }}
-      />
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/25"
-        style={{ transform: "translateZ(14px)" }}
-      />
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/15"
-        style={{ transform: "translateZ(8px)" }}
-      />
-      <motion.img
-        src={cutout}
-        alt="Player in Peak Mode training kit striking the ball, cut out"
-        loading="eager"
-        style={{ transform: "translateZ(42px)" }}
-        className="float-slow absolute inset-x-0 bottom-12 mx-auto h-[74%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_34px_44px_rgba(0,0,0,0.55)]"
-      />
-      <div
-        className="absolute bottom-12 left-1/2 h-5 w-56 -translate-x-1/2 rounded-[50%] bg-black/45 blur-md"
-        style={{ transform: "translateZ(16px)" }}
-      />
-    </>
-  );
-}
-
 export default function HeroVisual() {
   const ref = useRef(null);
-  const [cutout, setCutout] = useState(null);
+  const [fallback, setFallback] = useState(false);
   const mx = useMotionValue(0.5);
   const my = useMotionValue(0.5);
   const rotateX = useSpring(useTransform(my, [0, 1], [11, -11]), { stiffness: 110, damping: 16 });
   const rotateY = useSpring(useTransform(mx, [0, 1], [-14, 14]), { stiffness: 110, damping: 16 });
   const imgX = useTransform(mx, [0, 1], [10, -10]);
   const imgY = useTransform(my, [0, 1], [6, -6]);
-
-  useEffect(() => {
-    let alive = true;
-    (async () => {
-      try {
-        const { removeBackground } = await import("@imgly/background-removal");
-        const blob = await removeBackground(HERO_IMG, {
-          output: { format: "image/png", quality: 1 },
-          progress: () => {},
-        });
-        if (alive) setCutout(URL.createObjectURL(blob));
-      } catch {
-        if (alive) setCutout(null);
-      }
-    })();
-    return () => {
-      alive = false;
-    };
-  }, []);
 
   const onMove = (e) => {
     const r = ref.current.getBoundingClientRect();
@@ -164,16 +116,16 @@ export default function HeroVisual() {
         className="absolute inset-0 overflow-hidden rounded-sm border border-white/15"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {cutout ? (
-          <CutoutStage cutout={cutout} />
-        ) : (
+        {fallback ? (
           <motion.img
             src={HERO_IMG}
             alt="Player in Peak Mode training kit preparing to strike the ball"
             loading="eager"
-            style={{ x: imgX, y: imgY, transform: "translateZ(0) scale(1.12)", transformStyle: "preserve-3d" }}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.16]"
+            style={{ x: imgX, y: imgY, transform: "translateZ(0) scale(1.12)" }}
+            className="absolute inset-0 h-full w-full object-cover"
           />
+        ) : (
+          <CutoutStage cutout={CUTOUT} onFail={() => setFallback(true)} imgX={imgX} imgY={imgY} />
         )}
         <div
           className="speed-lines absolute inset-0 opacity-60 mix-blend-overlay"
@@ -191,5 +143,36 @@ export default function HeroVisual() {
         <Caption />
       </div>
     </motion.div>
+  );
+}
+
+function CutoutStage({ cutout, onFail, imgX, imgY }) {
+  return (
+    <>
+      <div
+        className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/15 blur-[80px]"
+        style={{ transform: "translateZ(0)" }}
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[85%] w-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/25"
+        style={{ transform: "translateZ(14px)" }}
+      />
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/15"
+        style={{ transform: "translateZ(8px)" }}
+      />
+      <motion.img
+        src={cutout}
+        onError={onFail}
+        alt="Player in Peak Mode training kit striking the ball, cut out"
+        loading="eager"
+        style={{ x: imgX(), y: imgY(), transform: "translateZ(42px)" }}
+        className="float-slow absolute inset-x-0 bottom-12 mx-auto h-[74%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_34px_44px_rgba(0,0,0,0.55)]"
+      />
+      <div
+        className="absolute bottom-12 left-1/2 h-5 w-56 -translate-x-1/2 rounded-[50%] bg-black/45 blur-md"
+        style={{ transform: "translateZ(16px)" }}
+      />
+    </>
   );
 }

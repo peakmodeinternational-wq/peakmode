@@ -172,3 +172,91 @@ export function ThreadCanvas() {
     </div>
   );
 }
+
+function ClockTicks() {
+  const ticks = [];
+  for (let i = 0; i < 60; i++) {
+    const a = (i / 60) * Math.PI * 2;
+    const isHour = i % 5 === 0;
+    ticks.push(
+      <mesh key={i} position={[Math.sin(a) * (isHour ? 1.52 : 1.66), Math.cos(a) * (isHour ? 1.52 : 1.66), 0]}>
+        <boxGeometry args={[isHour ? 0.05 : 0.025, isHour ? 0.22 : 0.08, 0.04]} />
+        <meshStandardMaterial
+          color={isHour ? "#F2DC98" : "#9FB4D4"}
+          metalness={0.85}
+          roughness={0.3}
+          emissive={isHour ? "#A67C1F" : "#000000"}
+          emissiveIntensity={isHour ? 0.55 : 0}
+          transparent
+          opacity={isHour ? 1 : 0.55}
+        />
+      </mesh>
+    );
+  }
+  return <group>{ticks}</group>;
+}
+
+function ClockHands() {
+  const second = useRef();
+  const minute = useRef();
+  const hour = useRef();
+  useFrame((state) => {
+    const t = state.clock.elapsedTime;
+    second.current.rotation.z = -((t % 60) / 60) * Math.PI * 2;
+    minute.current.rotation.z = -((t % 3600) / 3600) * Math.PI * 2;
+    hour.current.rotation.z = -((t % 43200) / 43200) * Math.PI * 2;
+  });
+  return (
+    <group position={[0, 0, 0.06]}>
+      <group ref={hour}>
+        <mesh position={[0, 0.4, 0]}>
+          <boxGeometry args={[0.07, 0.8, 0.05]} />
+          <meshStandardMaterial color="#D9B45B" metalness={0.85} roughness={0.28} />
+        </mesh>
+      </group>
+      <group ref={minute}>
+        <mesh position={[0, 0.58, 0]}>
+          <boxGeometry args={[0.05, 1.16, 0.05]} />
+          <meshStandardMaterial color="#F2DC98" metalness={0.85} roughness={0.28} />
+        </mesh>
+      </group>
+      <group ref={second}>
+        <mesh position={[0, 0.78, 0]}>
+          <boxGeometry args={[0.028, 1.56, 0.04]} />
+          <meshStandardMaterial color="#B8F04A" metalness={0.6} roughness={0.4} emissive="#B8F04A" emissiveIntensity={0.35} />
+        </mesh>
+      </group>
+      <mesh>
+        <cylinderGeometry args={[0.1, 0.1, 0.12, 24]} />
+        <meshStandardMaterial color="#D9B45B" metalness={0.9} roughness={0.2} />
+      </mesh>
+    </group>
+  );
+}
+
+export function DeadlineCanvas() {
+  return (
+    <div className="absolute inset-0">
+      <Canvas camera={{ position: [0, 0, 7], fov: 42 }} dpr={[1, 1.5]} gl={{ antialias: true, alpha: true }}>
+        <SceneLights />
+        <group rotation={[0.28, -0.55, 0]}>
+          <Float speed={1.6} rotationIntensity={0.35} floatIntensity={0.9}>
+            <mesh>
+              <circleGeometry args={[1.85, 96]} />
+              <meshStandardMaterial color="#1B2127" metalness={0.6} roughness={0.35} />
+            </mesh>
+            <mesh>
+              <torusGeometry args={[1.85, 0.05, 12, 96]} />
+              <meshStandardMaterial color="#D9B45B" metalness={0.85} roughness={0.25} emissive="#A67C1F" emissiveIntensity={0.25} />
+            </mesh>
+            <ClockTicks />
+            <ClockHands />
+          </Float>
+          <OrbitRing radius={2.45} tilt={0.55} color="#D9B45B" speed={0.16} />
+          <OrbitRing radius={2.75} tilt={1.05} color="#9FB4D4" speed={-0.1} />
+        </group>
+        <Sparkles count={70} scale={[12, 8, 5]} size={2} speed={0.45} color="#B8F04A" />
+      </Canvas>
+    </div>
+  );
+}

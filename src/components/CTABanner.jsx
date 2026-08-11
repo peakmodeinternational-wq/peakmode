@@ -10,7 +10,7 @@ export default function CTABanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#264570] via-[#16283F] to-[#264570]"
+        className="relative overflow-hidden rounded-xl border border-gold/30 bg-gradient-to-br from-[#2E363F] via-[#1B2127] to-[#2E363F]"
       >
         <div className="stripes-diag stripes-anim absolute inset-0 opacity-15" />
         <div className="grid-lines absolute inset-0 opacity-40" />

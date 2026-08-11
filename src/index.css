@@ -10,9 +10,9 @@
     @apply bg-page text-cream font-body antialiased;
     overflow-x: hidden;
     background-image:
-      radial-gradient(1100px 540px at 50% -12%, rgba(217, 180, 91, 0.16), transparent 62%),
-      radial-gradient(900px 500px at 100% 0%, rgba(184, 240, 74, 0.09), transparent 55%),
-      radial-gradient(800px 460px at -5% 30%, rgba(52, 93, 146, 0.16), transparent 60%);
+      radial-gradient(1100px 540px at 50% -12%, rgba(217, 180, 91, 0.14), transparent 62%),
+      radial-gradient(900px 500px at 100% 0%, rgba(184, 240, 74, 0.08), transparent 55%),
+      radial-gradient(800px 460px at -5% 30%, rgba(79, 89, 101, 0.2), transparent 60%);
   }
   ::selection {
     background: #d9b45b;
@@ -22,10 +22,10 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #1b3050;
+    background: #20262c;
   }
   ::-webkit-scrollbar-thumb {
-    background: #345d92;
+    background: #454e58;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #d9b45b;
@@ -76,7 +76,7 @@
   }
   .card {
     @apply relative overflow-hidden rounded-lg border border-cream/10 bg-navy transition-colors duration-300;
-    background-image: linear-gradient(165deg, rgba(61, 104, 160, 0.55), rgba(52, 93, 146, 0.98) 72%);
+    background-image: linear-gradient(165deg, rgba(79, 89, 101, 0.55), rgba(69, 78, 88, 0.98) 72%);
   }
   .card::before {
     content: "";

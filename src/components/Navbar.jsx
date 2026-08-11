@@ -31,7 +31,7 @@ function DesktopMenu() {
               className={({ isActive }) =>
                 cn(
                   "block px-4 py-3 text-[12.5px] font-semibold uppercase tracking-[0.16em] transition-colors",
-                  isActive ? "text-gold" : "text-white/75 hover:text-white"
+                  isActive ? "text-gold" : "text-white/75 hover:text-volt-light"
                 )
               }
             >

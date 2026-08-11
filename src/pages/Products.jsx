@@ -80,10 +80,11 @@ export default function Products() {
                     <div className="stripes-diag-soft absolute inset-0 opacity-30" />
                     <ProductArt product={p} />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/25" />
+                    <span className="absolute -right-4 top-5 h-[3px] w-20 rotate-[-22deg] bg-volt/60" />
                     <span className="relative font-display text-5xl font-black text-white/15">
                       {String(p.id).padStart(2, "0")}
                     </span>
-                    <span className="relative border border-gold/50 bg-ink/60 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.28em] text-gold backdrop-blur">
+                    <span className="relative border border-volt/50 bg-ink/60 px-3 py-1 text-[9px] font-bold uppercase italic tracking-[0.28em] text-volt backdrop-blur">
                       {p.cat}
                     </span>
                   </div>

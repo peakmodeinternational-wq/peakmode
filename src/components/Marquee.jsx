@@ -7,10 +7,10 @@ export default function Marquee({ items, reverse, className, fast }) {
       <div className={cn("marquee-track", reverse && "reverse", fast && "fast")}>
         {chunks.map((item, i) => (
           <span key={i} className="flex shrink-0 items-center">
-            <span className="px-6 text-xs font-bold uppercase tracking-[0.34em] text-white/65">
+            <span className="px-6 font-display text-xs font-black uppercase italic tracking-[0.3em] text-white/70">
               {item}
             </span>
-            <span className="text-gold">✦</span>
+            <span className="text-volt">//</span>
           </span>
         ))}
       </div>

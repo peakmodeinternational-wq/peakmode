@@ -18,6 +18,8 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       <div className="grid-lines absolute inset-0" />
       <div className="stripes-h absolute inset-0" />
+      <div className="speed-lines absolute inset-y-0 right-0 w-2/3" />
+      <div className="absolute -right-8 top-24 h-40 w-4 rotate-[20deg] bg-gradient-to-b from-volt/40 to-transparent" />
       <div className="absolute left-0 top-0 h-full w-1 rotate-180 bg-gradient-to-b from-gold/10 to-transparent" />
       <div className="absolute -left-32 top-1/3 h-72 w-72 rounded-full bg-gold/10 blur-[110px]" />
       <div className="stripes-diag-soft absolute right-0 top-0 h-40 w-96 rotate-45 opacity-25" />
@@ -151,8 +153,8 @@ export default function Hero() {
           </div>
 
           <div className="absolute -right-1 top-1/2 hidden -translate-y-1/2 rotate-90 xl:block">
-            <span className="flex items-center gap-3 whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.5em] text-white/30">
-              <span className="stripes-diag h-1 w-10" />
+            <span className="flex items-center gap-3 whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.5em] text-volt/80">
+              <span className="h-1 w-10 bg-gradient-to-r from-volt to-transparent" />
               Pm '26 — Performance Range
             </span>
           </div>

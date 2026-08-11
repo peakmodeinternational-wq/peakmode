@@ -43,7 +43,7 @@ export default function PromoBanner() {
               "Free 3-piece sampling for programs placed this month",
             ].map((line) => (
               <li key={line} className="flex items-start gap-3 text-sm text-white/70">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-volt" />
                 {line}
               </li>
             ))}
@@ -58,10 +58,12 @@ export default function PromoBanner() {
               {["SEP 05", "DEADLINE", "2026"].map((tag, i) => (
                 <div
                   key={tag}
-                  className={`border px-5 py-3 font-display text-sm font-black tracking-widest ${
+                  className={`border px-5 py-3 font-display text-sm font-black italic tracking-widest ${
                     i === 0
                       ? "grad-gold-text border-gold/70 bg-gold/10 shadow-[0_0_24px_-8px_rgba(217,180,91,0.5)]"
-                      : "border-gold/30 text-gold/90"
+                      : i === 1
+                        ? "border-volt/50 text-volt"
+                        : "border-gold/30 text-gold/90"
                   }`}
                 >
                   {tag}

@@ -96,7 +96,9 @@ export default function Footer() {
       <div className="border-t border-white/10 py-6">
         <div className="container-x flex flex-col items-center justify-between gap-3 text-[11px] uppercase tracking-[0.24em] text-white/45 sm:flex-row">
           <span>© 2026 Peak Mode International — All Rights Reserved</span>
-          <span className="text-gold/70">Engineered Performance · Built in Pakistan · Shipped Worldwide</span>
+          <span className="font-display text-[11px] font-bold uppercase italic tracking-[0.24em] text-volt/80">
+            Engineered Performance · Built in Pakistan · Shipped Worldwide
+          </span>
         </div>
       </div>
     </footer>

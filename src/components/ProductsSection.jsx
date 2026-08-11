@@ -64,17 +64,18 @@ function TiltCard({ product, index }) {
       className="group"
     >
       <div className="card h-full border-white/10 p-7 transition-colors duration-300 hover:border-gold/50">
-        <div className="relative h-44 overflow-hidden rounded-sm border border-white/5 bg-gradient-to-br from-steel/60 to-ink">
+<div className="relative h-44 overflow-hidden rounded-sm border border-white/5 bg-gradient-to-br from-steel/60 to-ink">
           <div className="stripes-diag-soft absolute inset-0 opacity-30" />
           <ProductArt product={product} Icon={Icon} />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/20" />
+          <div className="absolute -right-4 top-6 h-[3px] w-20 rotate-[-22deg] bg-volt/60" />
           <span className="absolute left-3 top-3 font-display text-5xl font-black text-white/8">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="absolute right-3 top-3 border border-gold/40 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.24em] text-gold">
+          <span className="absolute right-3 top-3 border border-volt/50 px-2 py-0.5 text-[9px] font-bold uppercase italic tracking-[0.24em] text-volt">
             {product.cat}
           </span>
-          <span className="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
+          <span className="absolute bottom-3 left-3 text-[10px] font-bold uppercase tracking-[0.2em] text-volt-light/80">
             {product.gsm}
           </span>
         </div>
@@ -85,11 +86,11 @@ function TiltCard({ product, index }) {
         <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/50">{product.tag}</p>
         <p className="mt-4 text-sm leading-relaxed text-white/65">{product.desc}</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/60">
+<div className="mt-5 flex flex-wrap gap-2">
+          <span className="border border-volt/30 px-2.5 py-1 text-[10px] font-bold uppercase italic tracking-widest text-volt/80">
             MOQ {product.moq}
           </span>
-          <span className="border border-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white/60">
+          <span className="border border-volt/30 px-2.5 py-1 text-[10px] font-bold uppercase italic tracking-widest text-volt/80">
             {product.lead}
           </span>
         </div>

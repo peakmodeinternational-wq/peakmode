@@ -14,8 +14,9 @@ export default function SectionHeading({ eyebrow, title, gold, sub, center, clas
           center && "justify-center"
         )}
       >
-        <span className="h-px w-12 bg-gold" />
+        <span className="h-px w-12 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
         <span className="eyebrow">{eyebrow}</span>
+        <span className="text-volt">»</span>
       </motion.div>
       <motion.h2
         initial={{ opacity: 0, y: 28 }}

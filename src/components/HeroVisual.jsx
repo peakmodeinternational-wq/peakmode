@@ -40,19 +40,24 @@ export default function HeroVisual() {
           className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent" />
-        <div className="stripes-diag-soft absolute inset-0 opacity-20 mix-blend-overlay" />
+        <div className="speed-lines absolute inset-0 opacity-60 mix-blend-overlay" />
+        <span className="absolute left-4 top-4 inline-block bg-volt px-3 py-1.5 font-display text-[10px] font-black uppercase italic tracking-[0.28em] text-ink shadow-[0_8px_24px_-8px_rgba(184,240,74,0.8)]">
+          New Season '26
+        </span>
         <div className="absolute inset-x-0 bottom-0 border-t border-gold/50">
           <div className="space-y-1.5 px-6 py-5">
-            <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-gold">
+            <p className="text-[9px] font-bold uppercase tracking-[0.34em] text-volt-light">
               135–160 GSM · Sublimated
             </p>
-            <p className="font-display text-xl font-black uppercase leading-tight tracking-tight text-white">
+            <p className="font-display text-xl font-black uppercase italic leading-tight tracking-tight text-white">
               Match-Day Baseball Jersey
             </p>
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/60">
               Your crest, sponsor panels &amp; numbering
             </p>
           </div>
+        </div>
+      </div>
         </div>
       </div>
     </motion.div>

@@ -15,6 +15,11 @@ export default {
         brass: "#7A5E1E",
         frost: "#9FB4D4",
         teal: "#3E8E7E",
+        volt: {
+          DEFAULT: "#B8F04A",
+          light: "#D7FF8A",
+          dark: "#8FCC2E",
+        },
       },
       fontFamily: {
         display: ["Archivo", "system-ui", "sans-serif"],

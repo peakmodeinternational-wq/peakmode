@@ -166,7 +166,7 @@ function CutoutStage({ cutout, onFail, imgX, imgY }) {
         onError={onFail}
         alt="Player in Peak Mode training kit striking the ball, cut out"
         loading="eager"
-        style={{ x: imgX(), y: imgY(), transform: "translateZ(42px)" }}
+        style={{ x: imgX, y: imgY, transform: "translateZ(42px)" }}
         className="float-slow absolute inset-x-0 bottom-12 mx-auto h-[74%] w-auto max-w-none object-contain object-bottom drop-shadow-[0_34px_44px_rgba(0,0,0,0.55)]"
       />
       <div

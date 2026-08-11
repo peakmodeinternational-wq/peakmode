@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="mt-6 flex items-center gap-3">
             {[
               { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/peak-mode-international" },
-              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/peakmode.international" },
+              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/peakmodeinternational" },
               { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@PeakModeInternational" },
             ].map(({ icon: Icon, label, href }) => (
               <a

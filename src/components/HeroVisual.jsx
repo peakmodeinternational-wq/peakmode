@@ -58,8 +58,6 @@ export default function HeroVisual() {
           </div>
         </div>
       </div>
-        </div>
-      </div>
     </motion.div>
   );
 }

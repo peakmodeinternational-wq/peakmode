@@ -6,6 +6,7 @@ import Capabilities from "../components/Capabilities";
 import ProcessSection from "../components/ProcessSection";
 import Testimonials from "../components/Testimonials";
 import CTABanner from "../components/CTABanner";
+import FactoryFloor from "../components/FactoryFloor";
 import StripDivider from "../components/StripDivider";
 import Marquee from "../components/Marquee";
 import { CERTIFICATIONS } from "../data/site";
@@ -22,6 +23,7 @@ export default function Home() {
       <Capabilities />
       <StripDivider label="Production line" />
       <ProcessSection compact />
+      <FactoryFloor />
       <Testimonials />
       <CTABanner />
     </>

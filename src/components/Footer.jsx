@@ -76,7 +76,7 @@ export default function Footer() {
               <span>
                 <a href="tel:+13105550192" className="transition-colors hover:text-gold">+1 (310) 555-0192</a>
                 <br />
-                <a href="tel:+924155501920" className="transition-colors hover:text-gold">+92 (41) 5550 1920</a>
+                <a href="tel:+925255501920" className="transition-colors hover:text-gold">+92 (52) 5550 1920</a>
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -88,7 +88,7 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
-                12-K St. Sattar Road, Faisalabad, Punjab — Pakistan
+                12-K St. Sattar Road, Sialkot, Punjab — Pakistan
                 <br />
                 Factory visits by appointment
               </span>
@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="container-x flex flex-col items-center justify-between gap-3 text-[11px] uppercase tracking-[0.24em] text-cream/45 sm:flex-row">
           <span>© 2026 Peak Mode International — All Rights Reserved</span>
           <span className="font-display text-[11px] font-bold uppercase italic tracking-[0.24em] text-volt/80">
-            Engineered Performance · Built in Pakistan · Shipped Worldwide
+            Engineered in Sialkot · Shipped Worldwide
           </span>
         </div>
       </div>

@@ -264,7 +264,7 @@ export const TESTIMONIALS = [
 ];
 
 export const MILESTONES = [
-  { year: "2013", title: "Factory founded", desc: "12 sewing stations, Faisalabad, Pakistan." },
+  { year: "2013", title: "Factory founded", desc: "12 sewing stations, Sialkot, Pakistan." },
   { year: "2016", title: "First export program", desc: "50,000 units to a Dubai-based sports retailer." },
   { year: "2019", title: "In-house knits & dyeing", desc: "Trims and fabric control move under one roof." },
   { year: "2022", title: "U.S. sales desk", desc: "Pacific-time account managers for West Coast buyers." },

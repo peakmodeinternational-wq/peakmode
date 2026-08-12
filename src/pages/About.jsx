@@ -15,7 +15,7 @@ export default function About() {
         eyebrow="Our Story"
         title="Sportswear Built"
         gold="On Discipline."
-        sub="2013, twelve sewing stations, Faisalabad. Today: a 400-station campus shipping to 40+ markets — still with the same rulebook."
+        sub="2013, twelve sewing stations in Sialkot — the world's sports-goods capital. Today: a 400-station campus shipping to 40+ markets — still with the same rulebook."
         crumbs={["About"]}
       />
 

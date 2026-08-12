@@ -17,7 +17,7 @@ const INFO = [
   {
     icon: Phone,
     title: "U.S. Sales Desk",
-    lines: ["+1 (310) 555-0192", "+92 (41) 5550 1920"],
+    lines: ["+1 (310) 555-0192", "+92 (52) 5550 1920"],
   },
   {
     icon: Mail,
@@ -32,7 +32,7 @@ const INFO = [
   {
     icon: MapPin,
     title: "Factory",
-    lines: ["12-K St. Sattar Road, Faisalabad", "Punjab — Pakistan"],
+    lines: ["12-K St. Sattar Road, Sialkot", "Punjab — Pakistan"],
   },
 ];
 
@@ -217,7 +217,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <StripDivider label="Faisalabad · Los Angeles · Anywhere" />
+      <StripDivider label="Sialkot · Los Angeles · Anywhere" />
     </>
   );
 }

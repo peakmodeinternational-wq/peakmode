@@ -16,23 +16,23 @@ import { PRODUCTS } from "../data/site";
 const INFO = [
   {
     icon: Phone,
-    title: "U.S. Sales Desk",
-    lines: ["+1 (310) 555-0192", "+92 (52) 5550 1920"],
+    title: "Business Number",
+    lines: ["+92 309 6518412", ""],
   },
   {
     icon: Mail,
     title: "Email",
-    lines: ["sales@peakmodeinternational.com", "samples@peakmodeinternational.com"],
+    lines: ["peakmodeinternation@gmail.com", ""],
   },
   {
     icon: MessageSquare,
     title: "WhatsApp Business",
-    lines: ["+1 (310) 555-0192", "Replies within 4 business hours"],
+    lines: ["+92 309 6518412", "Replies within 4 business hours"],
   },
   {
     icon: MapPin,
     title: "Factory",
-    lines: ["12-K St. Sattar Road, Sialkot", "Punjab — Pakistan"],
+    lines: ["32°24'41.1\"N 74°37'44.9\"E", "Sialkot — Punjab, Pakistan"],
   },
 ];
 
@@ -158,7 +158,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
-                    placeholder="+1 (310) 000-0000"
+                    placeholder="+92 300 0000000"
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>

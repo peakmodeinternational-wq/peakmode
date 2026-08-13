@@ -184,11 +184,11 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="tel:+13105550192"
+            href="tel:+923096518412"
             className="hidden items-center gap-2 text-[12px] font-semibold uppercase tracking-widest text-cream/70 transition-colors hover:text-gold md:flex"
           >
             <Phone className="h-3.5 w-3.5 text-gold" />
-            +1 (310) 555-0192
+            +92 309 6518412
           </a>
           <Link to="/contact" className="btn-gold hidden !px-5 !py-3 md:inline-flex">
             Request a Quote

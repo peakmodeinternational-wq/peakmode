@@ -74,23 +74,30 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
-                <a href="tel:+13105550192" className="transition-colors hover:text-gold">+1 (310) 555-0192</a>
+                <a href="tel:+923096518412" className="transition-colors hover:text-gold">+92 309 6518412</a>
                 <br />
-                <a href="tel:+925255501920" className="transition-colors hover:text-gold">+92 (52) 5550 1920</a>
+                <a href="https://wa.me/923096518412" target="_blank" rel="noreferrer" className="transition-colors hover:text-gold">WhatsApp Business</a>
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              <a href="mailto:sales@peakmodeinternational.com" className="transition-colors hover:text-gold">
-                sales@peakmodeinternational.com
+              <a href="mailto:peakmodeinternation@gmail.com" className="transition-colors hover:text-gold">
+                peakmodeinternation@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <span>
-                12-K St. Sattar Road, Sialkot, Punjab — Pakistan
-                <br />
-                Factory visits by appointment
+                <a
+                href="https://maps.google.com/?q=32.411417,74.629139"
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-gold"
+              >
+                32°24'41.1"N 74°37'44.9"E — Sialkot
+              </a>
+              <br />
+              Punjab, Pakistan · Factory visits by appointment
               </span>
             </li>
           </ul>

@@ -6,7 +6,7 @@ export default function Logo({ className }) {
       <img
         src={import.meta.env.BASE_URL + "logo.png"}
         alt="Peak Mode International logo"
-        className="h-9 w-auto shrink-0"
+        className="h-11 w-auto shrink-0 sm:h-12"
       />
     </span>
   );

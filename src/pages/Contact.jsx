@@ -32,7 +32,7 @@ const INFO = [
   {
     icon: MapPin,
     title: "Factory",
-    lines: ["32°24'41.1\"N 74°37'44.9\"E", "Sialkot — Punjab, Pakistan"],
+    lines: ["Athwal, Sialkot — Punjab, Pakistan", "32°24'41.1\"N 74°37'44.9\"E"],
   },
 ];
 

@@ -94,10 +94,10 @@ export default function Footer() {
                 rel="noreferrer"
                 className="transition-colors hover:text-gold"
               >
-                32°24'41.1"N 74°37'44.9"E — Sialkot
+                Athwal, Sialkot — Punjab, Pakistan
               </a>
               <br />
-              Punjab, Pakistan · Factory visits by appointment
+              <span className="text-cream/50">32°24'41.1"N 74°37'44.9"E · Factory visits by appointment</span>
               </span>
             </li>
           </ul>

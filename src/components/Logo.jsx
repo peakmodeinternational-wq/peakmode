@@ -3,10 +3,11 @@ import { cn } from "../lib/cn";
 export default function Logo({ className }) {
   return (
     <span className={cn("flex items-center gap-3", className)}>
-      <span className="relative grid h-10 w-10 shrink-0 place-items-center">
-        <span className="absolute inset-0 rotate-45 border-2 border-gold" />
-        <span className="font-display text-lg font-black text-gold">PM</span>
-      </span>
+      <img
+        src={import.meta.env.BASE_URL + "logo.svg"}
+        alt="Peak Mode International logo"
+        className="h-10 w-10 shrink-0"
+      />
       <span className="leading-none">
         <span className="block font-display text-lg font-black uppercase tracking-[0.14em] text-cream">
           Peak Mode

@@ -103,7 +103,7 @@ export default function Products() {
                       ["Fabric", p.fabric],
                       ["Weight", p.gsm],
                       ["Sizes", p.sizes],
-                      ["MOQ", p.moq],
+                      ["Samples", p.moq],
                       ["Lead time", p.lead],
                       ["Sampling", "7–10 days"],
                     ].map(([k, v]) => (

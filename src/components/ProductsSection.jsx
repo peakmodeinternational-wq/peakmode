@@ -88,7 +88,7 @@ function TiltCard({ product, index }) {
 
 <div className="mt-5 flex flex-wrap gap-2">
           <span className="border border-volt/30 px-2.5 py-1 text-[10px] font-bold uppercase italic tracking-widest text-volt/80">
-            MOQ {product.moq}
+            {product.moq}
           </span>
           <span className="border border-volt/30 px-2.5 py-1 text-[10px] font-bold uppercase italic tracking-widest text-volt/80">
             {product.lead}

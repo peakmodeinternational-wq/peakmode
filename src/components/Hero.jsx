@@ -10,7 +10,7 @@ import HeroVisual from "./HeroVisual";
 const CHIPS = [
   { label: "OEKO-TEX®", className: "left-2 top-[14%] float-slow" },
   { label: "4-WAY STRETCH", className: "right-3 top-[24%] float-slow [animation-delay:-2s]" },
-  { label: "MOQ 300+", className: "left-4 bottom-[18%] float-slow [animation-delay:-4s]" },
+  { label: "Free Samples", className: "left-4 bottom-[18%] float-slow [animation-delay:-4s]" },
 ];
 
 export default function Hero() {

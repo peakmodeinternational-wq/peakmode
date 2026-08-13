@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-6 font-display text-[2.35rem] font-black uppercase leading-[0.96] tracking-tight sm:mt-7 sm:text-6xl lg:text-[4.6rem] xl:text-7xl"
+            className="mt-6 font-display text-[2rem] font-black uppercase leading-[0.96] tracking-tight sm:mt-7 sm:text-6xl lg:text-[4.6rem] xl:text-7xl"
           >
             Engineered
             <br />

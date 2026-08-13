@@ -17,7 +17,7 @@ export default function CTABanner() {
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gold/15 blur-[100px]" />
         <div className="absolute -bottom-32 -left-20 h-72 w-72 rounded-full bg-gold/10 blur-[90px]" />
 
-        <div className="relative grid items-center gap-10 px-8 py-16 sm:px-14 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="relative grid items-center gap-10 px-6 py-14 sm:px-14 sm:py-16 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <span className="eyebrow">Next Step</span>
             <h2 className="mt-4 font-display text-3xl font-black uppercase leading-[1.02] sm:text-4xl lg:text-5xl">

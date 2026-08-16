@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Manufacturing from "./pages/Manufacturing";
 import Contact from "./pages/Contact";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingWhatsApp />
       </div>
     </HashRouter>
   );

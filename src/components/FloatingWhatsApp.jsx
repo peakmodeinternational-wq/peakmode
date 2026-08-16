@@ -29,9 +29,6 @@ export default function FloatingWhatsApp() {
         <span className="absolute inset-0 rounded-full bg-[#25D366]/50 [animation:pulse-ring_2.2s_ease-out_infinite]" />
         <WhatsAppIcon className="relative h-7 w-7" />
       </span>
-      <span className="pointer-events-none hidden translate-x-2 rounded-sm border border-cream/15 bg-ink/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white opacity-0 shadow-xl backdrop-blur transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
-        WhatsApp Business
-      </span>
     </motion.a>
   );
 }

@@ -22,7 +22,7 @@ export default function FloatingWhatsApp() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.1, duration: 0.5 }}
-      className="group fixed bottom-0 right-0 z-50 flex items-center gap-2.5"
+      className="group fixed bottom-5 right-5 z-50 flex items-center gap-2.5"
     >
       <span className="absolute -left-1 -top-1 h-3 w-3 rounded-full bg-volt shadow-[0_0_10px_rgba(184,240,74,0.9)]" />
       <span className="relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_12px_30px_-10px_rgba(37,211,102,0.7)] transition-transform duration-300 group-hover:scale-110">

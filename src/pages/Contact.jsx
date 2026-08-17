@@ -38,6 +38,8 @@ const INFO = [
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
   return (
     <>
@@ -116,9 +118,29 @@ export default function Contact() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  setSent(true);
+                  setError("");
+                  setSending(true);
+                  const fd = new FormData(e.currentTarget);
+                  fd.append("_subject", "New inquiry from peakmodeinternational.com");
+                  fd.append("_template", "table");
+                  fd.append("_captcha", "false");
+                  try {
+                    const res = await fetch(
+                      "https://formsubmit.co/ajax/peakmodeinternation@gmail.com",
+                      { method: "POST", body: fd, headers: { Accept: "application/json" } }
+                    );
+                    if (res.ok) {
+                      setSent(true);
+                    } else {
+                      setError("Could not send — try again or reach us on WhatsApp directly.");
+                    }
+                  } catch {
+                    setError("Could not send — check your connection or reach us on WhatsApp directly.");
+                  } finally {
+                    setSending(false);
+                  }
                 }}
                 className="grid gap-5 sm:grid-cols-2"
               >
@@ -128,6 +150,7 @@ export default function Contact() {
                   </label>
                   <input
                     required
+                    name="name"
                     placeholder="Jordan Miles"
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
@@ -137,6 +160,7 @@ export default function Contact() {
                     Company
                   </label>
                   <input
+                    name="company"
                     placeholder="Miles Athletic Co."
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
@@ -159,6 +183,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="+92 300 0000000"
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
@@ -169,6 +194,7 @@ export default function Contact() {
                   </label>
                   <select
                     required
+                    name="category"
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors focus:border-gold"
                   >
                     {PRODUCTS.map((p) => (
@@ -183,7 +209,7 @@ export default function Contact() {
                   <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.26em] text-cream/55">
                     Estimated quantity
                   </label>
-                  <select className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors focus:border-gold">
+                  <select name="quantity" className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors focus:border-gold">
                     {["300 – 1,000 pcs", "1,000 – 5,000 pcs", "5,000 – 25,000 pcs", "25,000+ pcs"].map(
                       (o) => (
                         <option key={o} className="bg-page">
@@ -199,15 +225,19 @@ export default function Contact() {
                   </label>
                   <textarea
                     required
+                    name="details"
                     rows={5}
                     placeholder="Styles, sizes, target delivery date, retail price point…"
                     className="w-full resize-none border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <button type="submit" className="btn-gold w-full sm:w-auto">
-                    <Send className="h-4 w-4" /> Submit Request
+                  <button type="submit" disabled={sending} className="btn-gold w-full sm:w-auto disabled:opacity-60">
+                    <Send className="h-4 w-4" /> {sending ? "Sending…" : "Submit Request"}
                   </button>
+                  {error && (
+                    <p className="mt-4 text-sm text-red-400">{error}</p>
+                  )}
                   <p className="mt-4 text-[11px] text-cream/45">
                     NDA available on request. Your specs stay ours — and yours.
                   </p>

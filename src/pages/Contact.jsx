@@ -12,7 +12,6 @@ import {
 import PageHero from "../components/PageHero";
 import StripDivider from "../components/StripDivider";
 import { PRODUCTS } from "../data/site";
-import { sendMetaEvent } from "../lib/meta";
 
 const INFO = [
   {
@@ -119,9 +118,6 @@ export default function Contact() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  const fd = new FormData(e.currentTarget);
-                  const email = String(fd.get("email") || "").trim();
-                  sendMetaEvent("Lead", { email });
                   setSent(true);
                 }}
                 className="grid gap-5 sm:grid-cols-2"

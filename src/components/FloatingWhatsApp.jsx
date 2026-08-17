@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { sendMetaEvent } from "../lib/meta";
 
 const WA_URL =
   "https://wa.me/923096518412?text=" +
@@ -18,6 +19,7 @@ export default function FloatingWhatsApp() {
       href={WA_URL}
       target="_blank"
       rel="noreferrer"
+      onClick={() => sendMetaEvent("Contact")}
       aria-label="Chat with Peak Mode International on WhatsApp Business"
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}

@@ -12,6 +12,7 @@ import {
 import PageHero from "../components/PageHero";
 import StripDivider from "../components/StripDivider";
 import { PRODUCTS } from "../data/site";
+import { sendMetaEvent } from "../lib/meta";
 
 const INFO = [
   {
@@ -118,6 +119,9 @@ export default function Contact() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const fd = new FormData(e.currentTarget);
+                  const email = String(fd.get("email") || "").trim();
+                  sendMetaEvent("Lead", { email });
                   setSent(true);
                 }}
                 className="grid gap-5 sm:grid-cols-2"
@@ -148,6 +152,7 @@ export default function Contact() {
                   <input
                     required
                     type="email"
+                    name="email"
                     placeholder="jordan@company.com"
                     className="w-full border border-cream/20 bg-white/10 px-4 py-3.5 text-sm text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-gold"
                   />

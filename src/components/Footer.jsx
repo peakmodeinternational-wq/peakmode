@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { NAV_GROUPS } from "../data/site";
 import Logo from "./Logo";
 import StripDivider from "./StripDivider";
@@ -17,8 +17,9 @@ export default function Footer() {
           </p>
           <div className="mt-6 flex items-center gap-3">
             {[
+              { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/peakmodeintl/" },
+              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/peakmodeinternational/" },
               { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/peak-mode-international" },
-              { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/peakmodeinternational" },
               { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@PeakModeInternational" },
             ].map(({ icon: Icon, label, href }) => (
               <a

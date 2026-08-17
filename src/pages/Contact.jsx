@@ -132,6 +132,7 @@ export default function Contact() {
                       { method: "POST", body: fd, headers: { Accept: "application/json" } }
                     );
                     if (res.ok) {
+                      if (typeof window.fbq === "function") window.fbq("track", "Lead");
                       setSent(true);
                     } else {
                       setError("Could not send — try again or reach us on WhatsApp directly.");

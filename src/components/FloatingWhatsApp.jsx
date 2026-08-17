@@ -18,6 +18,9 @@ export default function FloatingWhatsApp() {
       href={WA_URL}
       target="_blank"
       rel="noreferrer"
+      onClick={() => {
+        if (typeof window.fbq === "function") window.fbq("track", "Contact");
+      }}
       aria-label="Chat with Peak Mode International on WhatsApp Business"
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}

@@ -7,37 +7,31 @@ function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
-function clientIp(headers) {
-  const fwd = headers.get("x-forwarded-for");
-  if (fwd) return fwd.split(",")[0].trim();
-  return headers.get("x-real-ip") || "0.0.0.0";
-}
-
-export default async function handler(req) {
-  if (req.method !== "POST") {
-    return json({ error: "POST only" }, 405);
-  }
-
+export async function POST(request) {
   const token = process.env.META_PIXEL_ACCESS_TOKEN;
   if (!token) {
-    return json(
+    return Response.json(
       { error: "META_PIXEL_ACCESS_TOKEN not configured — generate it in Meta Events Manager > Settings > Conversions API" },
-      501
+      { status: 501 }
     );
   }
 
   let body = {};
   try {
-    body = JSON.parse(req.body || "{}");
+    body = await request.json();
   } catch {
-    return json({ error: "Invalid JSON body" }, 400);
+    body = {};
+  }
+  const q = new URL(request.url).searchParams;
+  for (const key of ["eventName", "eventId", "email", "phone", "testEventCode"]) {
+    if (!body[key] && q.get(key)) body[key] = q.get(key);
   }
 
   const { eventName = "Contact", eventId, email, phone, testEventCode } = body;
 
   const userData = {
-    client_ip_address: clientIp(req.headers),
-    client_user_agent: req.headers.get("user-agent") || "",
+    client_ip_address: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "0.0.0.0",
+    client_user_agent: request.headers.get("user-agent") || "",
   };
   if (email) userData.em = [sha256(String(email).trim().toLowerCase())];
   if (phone) userData.ph = [sha256(String(phone).replace(/[^\d]/g, ""))];
@@ -48,8 +42,7 @@ export default async function handler(req) {
       event_time: Math.floor(Date.now() / 1000),
       event_id: eventId,
       action_source: "website",
-      event_source_url:
-        req.headers.get("x-forwarded-host") || "https://peakmodeinternational.com",
+      event_source_url: request.headers.get("x-forwarded-host") || "https://peakmodeinternational.com",
       user_data: userData,
     },
   ];
@@ -59,16 +52,15 @@ export default async function handler(req) {
 
   try {
     const res = await fetch(`${GRAPH_URL}?${params}`, { method: "POST" });
-    const payload = await res.json();
-    return json(payload, res.ok ? 200 : 400);
+    return Response.json(await res.json(), { status: res.ok ? 200 : 400 });
   } catch (err) {
-    return json({ error: "Meta request failed", detail: String(err && err.message ? err.message : err) }, 502);
+    return Response.json(
+      { error: "Meta request failed", detail: String(err && err.message ? err.message : err) },
+      { status: 502 }
+    );
   }
 }
 
-function json(payload, status) {
-  return new Response(JSON.stringify(payload), {
-    status,
-    headers: { "content-type": "application/json" },
-  });
+export async function GET() {
+  return Response.json({ ok: true, route: "capi", ready: !!process.env.META_PIXEL_ACCESS_TOKEN });
 }

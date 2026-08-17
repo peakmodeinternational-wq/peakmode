@@ -14,6 +14,7 @@ function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
+    if (typeof window.fbq === "function") window.fbq("track", "PageView");
   }, [pathname]);
   return null;
 }

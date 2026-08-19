@@ -12,6 +12,7 @@ import {
 import PageHero from "../components/PageHero";
 import StripDivider from "../components/StripDivider";
 import { PRODUCTS } from "../data/site";
+import { sendMetaEvent } from "../lib/meta";
 
 const INFO = [
   {
@@ -132,7 +133,8 @@ export default function Contact() {
                       { method: "POST", body: fd, headers: { Accept: "application/json" } }
                     );
                     if (res.ok) {
-                      if (typeof window.fbq === "function") window.fbq("track", "Lead");
+                      const fd2 = new FormData(e.currentTarget);
+                      sendMetaEvent("Lead", { email: String(fd2.get("email") || "").trim() });
                       setSent(true);
                     } else {
                       setError("Could not send — try again or reach us on WhatsApp directly.");
